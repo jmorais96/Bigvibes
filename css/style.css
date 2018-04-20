@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html{
@@ -16,24 +17,36 @@ html{
   color: white;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  padding: 25px;
-}align-items: center;align-items: center;
 
-header ul{
-  text-align: center;
+  }
 
-  background-color: black;
-}
+  .row{
+      max-width: 100%;
+      margin: 0 auto;
 
-header ul li{
-  display: inline;
-  list-style: none;
-}
 
-header ul li a{
-  text-decoration: none;
-  color: white;
-  margin-right: 25px;
-  font-size: 90%;
+  }
 
-}
+  nav{
+    background-color: black;
+  }
+
+  nav ul{
+    text-align: right;
+    padding: 20px 0px 20px 0px;
+    margin-right: 50px;
+  }
+
+  nav ul li{
+    display: inline;
+    list-style: none;
+
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 50px;
+    font-size: 90%;
+
+  }
