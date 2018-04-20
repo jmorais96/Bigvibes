@@ -32,9 +32,8 @@ html{
   }
 
   nav ul{
-    text-align: right;
+    text-align: center;
     padding: 20px 0px 20px 0px;
-    margin-right: 50px;
   }
 
   nav ul li{
