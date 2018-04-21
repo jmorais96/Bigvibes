@@ -19,7 +19,6 @@ html{
   overflow-x: hidden;
 
   }
-
   .row{
       max-width: 100%;
       margin: 0 auto;
@@ -27,25 +26,54 @@ html{
 
   }
 
-  nav{
+  /*Primeira navegação*/
+
+  .main-nav{
     background-color: black;
   }
 
-  nav ul{
+  .main-nav ul{
     text-align: center;
     padding: 20px 0px 20px 0px;
   }
 
-  nav ul li{
+  .main-nav ul li{
     display: inline;
     list-style: none;
 
   }
 
-  nav ul li a{
+  .main-nav ul li a{
     text-decoration: none;
     color: white;
     margin-right: 50px;
     font-size: 90%;
 
   }
+
+  /*  segunda navegação*/
+
+  /*
+    .nav-js{
+      background-color: black;
+      opacity:0;
+    }
+
+    .nav-js ul{
+      text-align: center;
+      padding: 20px 0px 20px 0px;
+    }
+
+    .nav-js ul li{
+      display: inline;
+      list-style: none;
+
+    }
+
+    .nav-js ul li a{
+      text-decoration: none;
+      color: white;
+      margin-right: 50px;
+      font-size: 90%;
+
+    } */
