@@ -1,14 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
 }
 
-html{
+html,
+body {
 
   font-family: 'Lato', sans-serif;
   font-size: 20px;
@@ -19,6 +20,8 @@ html{
   overflow-x: hidden;
 
   }
+
+/* REUSABLE PROPERTYS */
   .row{
       max-width: 100%;
       margin: 0 auto;
@@ -26,24 +29,25 @@ html{
 
   }
 
+/* --- HEADER --- */
+
   /*Primeira navegação*/
 
-  .main-nav{
+  .main-nav {
     background-color: black;
-  }
-
-  .main-nav ul{
-    text-align: center;
     padding: 20px 0px 20px 0px;
+    text-align: center; 
+      /*Isto corrige o bug na navegaçao*/
+    margin-top: -24px;  
   }
 
-  .main-nav ul li{
+
+  .main-nav li{
     display: inline;
     list-style: none;
-
   }
 
-  .main-nav ul li a{
+  .main-nav li a {
     text-decoration: none;
     color: white;
     margin-right: 50px;
