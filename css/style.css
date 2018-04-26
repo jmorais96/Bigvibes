@@ -23,12 +23,23 @@ body {
   }
 
 /* REUSABLE PROPERTYS */
-  .row{
-      max-width: 100%;
-      margin: 0 auto;
+    .row{
+          max-width: 100%;
+          margin: 0 auto;
+      }
 
 
-  }
+        .icon-small {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        font-size: 120%;
+        margin-right: 10px;
+
+        line-height: 120%;
+        vertical-align: middle;
+        margin-top: -5px;
+    }
 
 /* --- HEADER --- */
 
@@ -60,7 +71,7 @@ body {
         position: relative;
         list-style-type: none;
         display: inline-block;
-        width: 150px;
+        width: 200px;
     }
 
     .menu > ul > li > a {
@@ -104,10 +115,11 @@ body {
     .menu > ul > li > a:hover::before {
         opacity: 1;
     }
-   
 
+    .menu > ul > li > a > i {
+        vertical-align: middle;
+    }
 
-  
 
     /*ABOUT*/
     
