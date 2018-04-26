@@ -32,70 +32,87 @@ body {
 
 /* --- HEADER --- */
 
+    header {
+        align-items: center;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.42), rgba(0, 0, 0, 0.3)),url('../img/1.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-attachment: fixed;  
+    }
+
+    
   /*Primeira navegação*/
-
-  .main-nav {
-    background-color: black;
-    padding: 20px 0px 20px 0px;
-    text-align: center;
-      /*Isto corrige o bug na navegaçao*/
-
-  }
-
-
-  .main-nav li{
-    display: inline;
-    list-style: none;
-  }
-
-  .main-nav li a {
-    text-decoration: none;
-    color: white;
-    margin-right: 50px;
-    font-size: 90%;
-
-  }
-
-  /*  segunda navegação*/
-
-  /*
-    .nav-js{
-      background-color: black;
-      opacity:0;
+    .menu, .menu ul li {
+        margin: 0;
+        padding: 0;
     }
 
-    .nav-js ul{
-      text-align: center;
-      padding: 20px 0px 20px 0px;
+    .menu {
+        background-color: #fff;
+        width: 100%; 
+        white-space: nowrap; /* impede que os menus quebrem */
+        text-align: center; 
     }
 
-    .nav-js ul li{
-      display: inline;
-      list-style: none;
-
+    .menu > ul > li {
+        background-color: #fff;
+        position: relative;
+        list-style-type: none;
+        display: inline-block;
+        width: 150px;
     }
 
-    .nav-js ul li a{
-      text-decoration: none;
-      color: white;
-      margin-right: 50px;
-      font-size: 90%;
+    .menu > ul > li > a {
+        font-weight: bold;
+        padding: 15px 0;
+        color: #74C8D2;
+        text-decoration: none;
+        display: block;
+    }
 
-    } */
+    .menu > ul > li > a:hover {
+        color: #fff;
+        background-color: #74C8D2;
+        transition: all .5s ease-in-out;
+    }
+
+    .menu > ul > li > a::after,
+    .menu > ul > li > a::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        content: "";
+        opacity: 0;
+    }
+
+    .menu > ul > li > a::after {
+         top: 100%;
+         background: -webkit-radial-gradient(50% -50%, ellipse, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+        background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .menu > ul > li > a::before {
+         top: -5px;
+         background: -webkit-radial-gradient(50% 150%, ellipse, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+         background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .menu > ul > li > a:hover::after,
+    .menu > ul > li > a:hover::before {
+        opacity: 1;
+    }
+   
+
+
+  
 
     /*ABOUT*/
-    #about{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-image:url('../img/about.jpg');
-      background-size: 100%;
-      background-position: center;
-      height: 600px;
-      
-    }
+    
 
-    #about h1 {
+    #about > h1 {
       font-size: 80px;
       color: Blue;
     }
@@ -110,7 +127,7 @@ body {
 
     /*SEARCH*/
 
-    #search h1{
+    #search > h1{
       display: flex;
       justify-content: center;
 
@@ -140,7 +157,7 @@ body {
       border-bottom: 1px solid grey;
     }
 
-    #player input{
+    #player > input{
       margin: 15px 0px 15px 0px;
       height: 60px;
       width: 60%;
@@ -151,7 +168,7 @@ body {
       border-color: grey;
     }
 
-    #player button{
+    #player > button{
       height: 60px;
       width: 20%;
       margin-left: 20%;
