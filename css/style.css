@@ -56,15 +56,15 @@ body {
     .logo-img {
         margin: 0;
         padding: 0;
-        position: relative;
-        top: -100px;
-        text-align: center;
     }
 
     .logo-img > img {
         width: 40%;
         height: auto;
-    }
+        position: absolute;
+        left: 30%; 
+        top: -5%;
+}
 
     
   /*Primeira navegação*/
