@@ -52,6 +52,20 @@ body {
         background-attachment: fixed;  
     }
 
+
+    .logo-img {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -100px;
+        text-align: center;
+    }
+
+    .logo-img > img {
+        width: 40%;
+        height: auto;
+    }
+
     
   /*Primeira navegação*/
     .menu, .menu ul li {
@@ -75,6 +89,7 @@ body {
     }
 
     .menu > ul > li > a {
+        font-size: 90%;
         font-weight: bold;
         padding: 15px 0;
         color: #74C8D2;
@@ -120,6 +135,47 @@ body {
         vertical-align: middle;
     }
 
+
+
+    /* submenu */
+
+    .sub-menu {
+        width: 100%;
+        padding:5px 0px;
+        position:absolute;
+        top:100%;
+        left:0px;
+        z-index:-1;
+        opacity:0;
+        transition: all .5s ease-in-out;
+        background:#fff;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        }
+
+    .menu li:hover .sub-menu {
+        z-index:1;
+        opacity:1;
+        }
+
+
+    .sub-menu li {
+        display:block;
+        font-size:16px;
+        }
+
+        .sub-menu li a {
+        padding:10px 30px;
+        display:block;
+        text-decoration: none; 
+        color: #74C8D2;    
+        }
+
+        .sub-menu li a:hover, .sub-menu .current-item a {
+        background:#74C8D2;
+        color: #fff; 
+        transition: .5s ease-in-out;    
+        }
 
     /*ABOUT*/
     
