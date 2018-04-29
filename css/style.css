@@ -49,10 +49,10 @@ body {
         background-size: cover;
         background-position: center;
         height: 100vh;
-        background-attachment: fixed;  
+        background-attachment: fixed;
     }
 
-    
+
   /*Primeira navegação*/
     .menu, .menu ul li {
         margin: 0;
@@ -61,9 +61,9 @@ body {
 
     .menu {
         background-color: #fff;
-        width: 100%; 
+        width: 100%;
         white-space: nowrap; /* impede que os menus quebrem */
-        text-align: center; 
+        text-align: center;
     }
 
     .menu > ul > li {
@@ -122,7 +122,7 @@ body {
 
 
     /*ABOUT*/
-    
+
 
     #about > h1 {
       font-size: 80px;
@@ -189,4 +189,129 @@ body {
       border-style: solid;
       border-color: grey;
       margin-bottom:  25px;
+    }
+
+
+
+
+    /*about us*/
+
+    #about_us{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      border-bottom: 1px solid grey;
+    }
+
+    #about_us h1{
+      text-align: center;
+
+    }
+    #about_us .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #about_us .container .image img{
+      padding:10% 0 10% 0;
+      width: 100%;
+    }
+
+    #about_us .container .text{
+      padding: 25%;
+      text-align: justify;
+    }
+
+
+    /*contacts*/
+
+    #contacts{
+
+      margin: 20%;
+      border-bottom: 1px solid grey;
+    }
+
+    #contacts h1{
+      padding: 15%;
+      text-align: center;
+
+    }
+
+    #contacts .container{
+      display: flex;
+      justify-content: center;
+    }
+
+    #contacts .message{
+      width: 100%;
+    }
+
+    #contacts .message form input{
+      margin: 5px 0px 5px 0px;
+      height: 60px;
+      width: 90%;
+      align-self: center;
+      background-color: #414141;
+      color: white;
+      border-style: solid;
+      border-color: grey;
+      text-align: center;
+    }
+    #contacts .message form textarea{
+      margin: 5px 0px 5px 0px;
+      height: 180px;
+      width: 90%;
+      align-self: center;
+      background-color: #414141;
+      color: white;
+      border-style: solid;
+      border-color: grey;
+      text-align: center;
+      resize: none;
+    }
+
+    #contacts .message button{
+      margin: 5px 0px 5px 0px;
+      height: 60px;
+      width: 20%;
+      background-color: #414141;
+      color: white;
+      border-style: solid;
+      border-color: grey;
+      margin-bottom:  25px;
+    }
+
+
+    #contacts .music{
+      width: 100%;
+    }
+
+    #contacts .music .send{
+      margin: 5px 0px 5px 0px;
+      background-color: #414141;
+      height: 76%;
+      border-style: solid;
+      border-color: grey;
+    }
+
+    #contacts .music button{
+      margin: 5px 0px 5px 0px;
+      height: 60px;
+      width: 20%;
+      background-color: #414141;
+      color: white;
+      border-style: solid;
+      border-color: grey;
+      margin-bottom:  25px;
+    }
+
+    /*footer*/
+
+    footer{
+
+      display: flex;
+      justify-content: center;
+      padding: 10%;
+
     }
