@@ -29,7 +29,7 @@ section {
 
 /* REUSABLE PROPERTYS */
     .row {
-          max-width: 1366px;
+          max-width: 100%;
           margin: 0 auto;
       }
 
@@ -73,7 +73,6 @@ section {
     header {
         
         align-items: center;
-        mix-blend-mode: lighten;
         background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.69)),url('../img/1.jpg');
         background-size: cover;
         background-position: center;
@@ -92,18 +91,16 @@ section {
 .menu {
     background-color: #fff;
     width: 100%;
-    white-space: nowrap;
     /* impede que os menus quebrem */
     text-align: center;
 }
 
 .logo {
     position: absolute;
-    top: 1%;
-    bottom: 1%;
+    top: 0.6%;
     transform: translateY(-5%);
-    text-align: left;
-    width: 14%;
+    float:  left;
+    width: 200px;
     height: auto;
     overflow: hidden;
     margin-left: 5%;
@@ -265,7 +262,7 @@ section {
 }
 
 .steps>p {
-    text-align: justify;
+    text-align: left;
     margin-top: 5px;
     letter-spacing: 1px;
     font-size: 90%;
@@ -280,7 +277,7 @@ section {
     height: 50px;
     width: 50px;
     text-align: center;
-    padding: 8px;
+    padding: 5px;
     float: left;
     font-size: 150%;
     margin-right: 25px; 
@@ -319,9 +316,6 @@ section {
 
 
 
-
-
-/*slider*/
 
 
 
@@ -368,7 +362,7 @@ section {
 
 .artist-photo img {
     opacity: 0.7;
-    width: 130%;
+    width: 150%;
     height: auto;
     -webkit-transform: scale(1.18) skewX(10deg); /* reverte o skew para a imagem ficar reta */
     transform: skewX(10deg);
