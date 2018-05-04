@@ -131,11 +131,11 @@ section {
     display: block;
 }
 
-.menu>li>a:hover {
-    color: #fff;
-    background-color: #74C8D2;
-    transition: all .5s ease-in-out;
-}
+//.menu>li>a:hover {
+//    color: #fff;
+//    background-color: #74C8D2;
+//    transition: all .5s ease-in-out;
+//}
 
 .menu>li>a::after,
 .menu>li>a::before {
@@ -372,12 +372,12 @@ section {
 }
 
 
-.artist-photo img:hover {
-    opacity: 1;
-    -webkit-transform: scale(1.03) skewX(10deg);;
-    transform: scale(1.03) skewX(10deg);
-    filter: hue-rotate(250deg);
-}
+//.artist-photo img:hover {
+//    opacity: 1;
+//    -webkit-transform: scale(1.03) skewX(10deg);;
+//    transform: scale(1.03) skewX(10deg);
+//    filter: hue-rotate(250deg);
+//}
 
 
 
