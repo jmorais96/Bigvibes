@@ -14,9 +14,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  color: white;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   }
@@ -378,7 +376,7 @@ section {
     opacity: 1;
     -webkit-transform: scale(1.03) skewX(10deg);;
     transform: scale(1.03) skewX(10deg);
-    filter: hue-rotate(150deg);
+    filter: hue-rotate(250deg);
 }
 
 
