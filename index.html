@@ -38,11 +38,35 @@
         </nav>
         
         
-    <div class="slider">
-        <img class="fadeimg" src="img/dummy-640x310-1.jpg" alt="">
-        <img class="fadeimg" src="img/dummy-640x310-2.jpg" alt="">
-        <img class="fadeimg" src="img/dummy-640x310-3.jpg" alt="">
-    </div>        
+  <div class=carousel>
+
+  <ul class=panes>
+
+    <li>
+      <img id="img-dot-1" src="img/dummy-640x310-1.jpg" alt="">
+    </li>
+
+    <li>
+      <img id="img-dot-2" src="img/dummy-640x310-3.jpg" alt="">
+    </li>
+
+    <li>
+      <img id="img-dot-3" src="img/dummy-640x310-4.jpg" alt="">
+    </li>
+
+    <li>
+      <img id="img-dot-4" src="img/dummy-640x310-1.jpg" alt="">
+    </li>
+
+    <li>
+      <img id="img-dot-5" src="img/dummy-640x310-2.jpg" alt="">
+    </li>
+
+  </ul>
+      
+      
+
+</div>
         
      
 
@@ -59,7 +83,7 @@
 
 
     <!--------- SECTION SEARCH ------------>
-     <section class="section-search divider">
+     <section class="section-search">
         <div class="row">
           <h1>SEARCH YOUR VIBE</h1>
         </div>
@@ -164,52 +188,96 @@
 
       <!--------- SECTION ABOUT ------------>
 
-      <div id="about_us">
+      <section class="section-about" id="about">
+        <div class="row">  
         <h1>ABOUT US</h1>
-        <div class="container">
-          <div class="image">
-            <img src="img/about_us.png" alt="">
-          </div>
-          <div class="text">
-            <p>Aenean at lorem non nisi blandit consequat vel sit amet arcu. Proin nec urna commodo, tincidunt metus non, dictum dui. Donec ut dolor ut eros venenatis pellentesque sit amet a elit. Suspendisse congue arcu sed risus tincidunt ullamcorper. In sodales, orci sit amet aliquam ultrices, odio magna commodo risus, non pellentesque ipsum turpis id felis. Sed aliquam quam eu ex aliquam, sed mattis mauris vulputate. Aliquam interdum lorem vitae est volutpat ultrices. Nam mattis dolor id dolor tincidunt, vitae eleifend lorem mollis. Duis aliquet leo diam, ac mollis erat facilisis id. Vestibulum laoreet nisl vel diam laoreet fringilla. </p>
-          </div>
         </div>
-      </div>
+          
+            <div class="row">
+                <div class="image">
+            <img src="img/dummy-640x310-1.jpg" alt="">
+                </div>
+        </div> 
+          
+            
+        <div class="row">
+                <div class="long-text">
+            <p>Aenean at lorem non nisi blandit consequat vel sit amet arcu. Proin nec urna commodo, tincidunt metus non, dictum dui. Donec ut dolor ut eros venenatis pellentesque sit amet a elit. Suspendisse congue arcu sed risus tincidunt ullamcorper. In sodales, orci sit amet aliquam ultrices, odio magna commodo risus, non pellentesque ipsum turpis id felis. Sed aliquam quam eu ex aliquam, sed mattis mauris vulputate. Aliquam interdum lorem vitae est volutpat ultrices. Nam mattis dolor id dolor tincidunt, vitae eleifend lorem mollis. Duis aliquet leo diam, ac mollis erat facilisis id. Vestibulum laoreet nisl vel diam laoreet fringilla. </p>
+                    </div>
+                </div>
+      </section>
 
       <!--------- SECTION ABOUT ------------>
 
-      <div id="contacts">
+      <section class="section-contacts">
+        <div class="row">  
         <h1>CONTACT US</h1>
-        <div class="container">
-          <div class="message">
-            <form class="" action="" method="post">
-              <input type="text" name="" value="" placeholder="NAME">
-              <input type="email" name="" value="" placeholder="EMAIL">
-              <textarea name="message" rows="8" cols="80" placeholder="YOUR MESSAGE HERE..."></textarea>
-              <button type="button" name="button">SEND</button>
-            </form>
-          </div>
-          <div class="music">
-            <div class="send">
-              <h2>SEND US YOUR MUSIC</h2>
-              <p>If you are a brand new artist and want some exposure, if you are good, send us your samples!</p>
-              <h4>DRAG AND DROP HERE!</h4>
-            </div>
-            <button type="button" name="button">SEND</button>
-          </div>
         </div>
-      </div>
-      <!-- footer -->
+          
+        
+          
+          <div class="row">
+              <div class="contact-form">
+                <!---Primeira Caixa--->
+                <div class="col span-1-of-2">
+                <form class="" action="" method="post">
+                
+              <input class="contact-field" type="text" name="" value="" placeholder="NAME">
+
+                
+              <input class="contact-field" type="email" name="" value="" placeholder="EMAIL">
+                
+              <textarea class="contact-field" name="message" rows="8" cols="80" placeholder="YOUR MESSAGE HERE..."></textarea>  
+                    
+              <button href="mailto:nelsonpacheco95@gmail.com" class="btn" type="button" name="button">SEND</button>
+                
+            </form>
+                </div>
+                
+                <!---Segunda Segunda caixa--->
+                <div class="col span-1-of-2">
+
+                    <div class="send-field">
+                    <input type="file" id="realfile" hidden="hidden">
+                    <button type="button" id="custombtn">Choose a file...</button>
+                    <span id="customtext">No files chosen yet.</span>
+                    </div>    
+                    
+                
+                <button href="mailto:nelsonpacheco95@gmail.com" class="btn" type="button" name="button">SEND</button>
+                    
+                </div>
+                  </div>
+            </div>
+          
+      </section>
+      
+      
+      
+      
+      
+      
+      <!---SECTION 8 FOOTER--->
     <footer>
+        <!---- row para a navegaçao---->
+        <div class="row">
 
-      <div class="social">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
+            <ul class="social-links">
+            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+            <li><a href="#"><i class="ion-social-instagram"></i></a></li>            
+            </ul>
+        </div>
 
-      <p>copyright...</p>
-    </footer>
+        
+        <!------2 row para o texto dos copyrights---->
+        <div class="row">
+        <p class="copyright">Copyright &copy; 2018 by Epsilon Music. All rights reserved.</p>
+        
+        </div>
+        
+        </footer>
 
 
   </body>
