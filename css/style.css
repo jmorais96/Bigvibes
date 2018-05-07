@@ -29,7 +29,6 @@ body {
 section {
     height: 100vh;
     overflow: hidden;
-    margin-bottom: 5%;
     margin-top: 5%;
 }
 
@@ -245,22 +244,22 @@ section.divider:after {
 /* submenu */
 
 .sub-menu {
+    display: none;
     width: 100%;
     padding: 5px 0px;
     position: absolute;
     top: 100%;
     left: 0px;
-    z-index: 1;
-    opacity: 0;
-    transition: all .5s ease-in-out;
     background: #fff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    /* transition: all .5s ease-in-out;*/
 }
 
-.menu li:hover .sub-menu {
+/* .menu li:hover .sub-menu {
+    z-index: 1;
     opacity: 1;
-}
+} */
 
 
 .sub-menu li {
@@ -506,7 +505,7 @@ section.divider:after {
     z-index: 1000;
     color: #000;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0%;
 }
 /* classe para corrigir apenas o primeiro Info */
