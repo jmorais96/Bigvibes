@@ -24,11 +24,11 @@
         <div class="row">
             <img class="logo" src="img/logo.png" alt="logo">
           <ul class="menu menu-js">
-            <li><a href="#about_us"><i class="ion-ios-search-strong icon-small clearfix"></i>SEARCH</a></li>
-            <li><a href="#search"><i class="ion-ios-people icon-small clearfix"></i>TOP ARTISTS</a></li>
-            <li><a href="#top_artists"><i class="ion-ios-person icon-small clearfix"></i>ABOUT US</a></li>
+            <li><a href="#search"><i class="ion-ios-search-strong icon-small clearfix"></i>SEARCH</a></li>
+            <li><a href="#top_artists"><i class="ion-ios-people icon-small clearfix"></i>TOP ARTISTS</a></li>
+            <li><a href="#about_us"><i class="ion-ios-person icon-small clearfix"></i>ABOUT US</a></li>
             <li><a href="#contacts"><i class="ion-ios-telephone icon-small clearfix"></i>CONTACTS</a></li>
-            <li><a href="#contacts"><i class="ion-ios-unlocked icon-small clearfix"></i>SETTINGS</a><ul class="sub-menu">
+            <li><a href=""><i class="ion-ios-unlocked icon-small clearfix"></i>SETTINGS</a><ul class="sub-menu">
                 <li><a href="#">LOGIN</a></li>
                 <li><a href="#">REGISTER</a></li>
                 </ul>
@@ -36,8 +36,8 @@
           </ul>
         </div>
         </nav>
-        
-        
+
+
   <div class=carousel>
 
   <ul class=panes>
@@ -63,12 +63,12 @@
     </li>
 
   </ul>
-      
-      
+
+
 
 </div>
-        
-     
+
+
 
 
     </header>
@@ -83,7 +83,7 @@
 
 
     <!--------- SECTION SEARCH ------------>
-     <section class="section-search">
+     <section class="section-search" id="search">
         <div class="row">
           <h1>SEARCH YOUR VIBE</h1>
         </div>
@@ -110,22 +110,22 @@
         </div>
 
         <div class="row">
-                <input class="search-field" type="text" id="artist" placeholder="ALBUM NAME" value=""> <br>
+                <input class="search-field" type="text" id="album" placeholder="ALBUM NAME" value=""> <br>
         </div>
 
         <div class="row">
-                <input class="search-field" type="text" id="artist" placeholder="SONG NAME" value=""> <br>
+                <input class="search-field" type="text" id="song" placeholder="SONG NAME" value=""> <br>
         </div>
 
 
          <div class="row">
-             <button class="btn" type="submeter" name="submeter">SEARCH</button>
+             <button class="btn" type="submeter" name="submeter" id="submeter">SEARCH</button>
          </div>
             </div>
-         
-         
-         
-         
+
+
+
+
          <!-- <h1></h1>
         <div class="result-music">
           <div class="music">
@@ -156,7 +156,7 @@
             <button type="button" name="button">Biography</button>
           </div>
         </div> -->
-         
+
 
     </section>
 
@@ -165,7 +165,7 @@
 
       <!------------ SECTION TOP ARTISTS --------------->
 
-      <section class="section-artists">
+      <section class="section-artists" id="top_artists">
           <div class="row">
           <h1>SEE YOUR TOP ARTISTS</h1>
         </div>
@@ -185,7 +185,7 @@
 
                 <li>
                     <figure class="artist-photo">
-                        <img src="img/avicci.jpg" alt="Avicci">                        
+                        <img src="img/avicci.jpg" alt="Avicci">
                         <div class="info-container">
                         <h4>LOGIC</h4>
                         <p>Twitter-API</p>
@@ -223,18 +223,18 @@
 
       <!--------- SECTION ABOUT ------------>
 
-      <section class="section-about" id="about">
-        <div class="row">  
+      <section class="section-about" id="about_us">
+        <div class="row">
         <h1>ABOUT US</h1>
         </div>
-          
+
             <div class="row">
                 <div class="image">
             <img src="img/dummy-640x310-1.jpg" alt="">
                 </div>
-        </div> 
-          
-            
+        </div>
+
+
         <div class="row">
                 <div class="long-text">
             <p>Aenean at lorem non nisi blandit consequat vel sit amet arcu. Proin nec urna commodo, tincidunt metus non, dictum dui. Donec ut dolor ut eros venenatis pellentesque sit amet a elit. Suspendisse congue arcu sed risus tincidunt ullamcorper. In sodales, orci sit amet aliquam ultrices, odio magna commodo risus, non pellentesque ipsum turpis id felis. Sed aliquam quam eu ex aliquam, sed mattis mauris vulputate. Aliquam interdum lorem vitae est volutpat ultrices. Nam mattis dolor id dolor tincidunt, vitae eleifend lorem mollis. Duis aliquet leo diam, ac mollis erat facilisis id. Vestibulum laoreet nisl vel diam laoreet fringilla. </p>
@@ -244,31 +244,31 @@
 
       <!--------- SECTION ABOUT ------------>
 
-      <section class="section-contacts">
-        <div class="row">  
+      <section class="section-contacts" id="contacts">
+        <div class="row">
         <h1>CONTACT US</h1>
         </div>
-          
-        
-          
+
+
+
           <div class="row">
               <div class="contact-form">
                 <!---Primeira Caixa--->
                 <div class="col span-1-of-2">
                 <form class="" action="" method="post">
-                
+
               <input class="contact-field" type="text" name="" value="" placeholder="NAME">
 
-                
+
               <input class="contact-field" type="email" name="" value="" placeholder="EMAIL">
-                
-              <textarea class="contact-field" name="message" rows="8" cols="80" placeholder="YOUR MESSAGE HERE..."></textarea>  
-                    
+
+              <textarea class="contact-field" name="message" rows="8" cols="80" placeholder="YOUR MESSAGE HERE..."></textarea>
+
               <button href="mailto:nelsonpacheco95@gmail.com" class="btn" type="button" name="button">SEND</button>
-                
+
             </form>
                 </div>
-                
+
                 <!---Segunda Segunda caixa--->
                 <div class="col span-1-of-2">
 
@@ -276,22 +276,22 @@
                     <input type="file" id="realfile" hidden="hidden">
                     <button type="button" id="custombtn">Choose a file...</button>
                     <span id="customtext">No files chosen yet.</span>
-                    </div>    
-                    
-                
+                    </div>
+
+
                 <button href="mailto:nelsonpacheco95@gmail.com" class="btn" type="button" name="button">SEND</button>
-                    
+
                 </div>
                   </div>
             </div>
-          
+
       </section>
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
       <!---SECTION 8 FOOTER--->
     <footer>
         <div class="row">
@@ -300,17 +300,17 @@
             <li><a href="#"><i class="ion-social-facebook"></i></a></li>
             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
             <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-            <li><a href="#"><i class="ion-social-instagram"></i></a></li>            
+            <li><a href="#"><i class="ion-social-instagram"></i></a></li>
             </ul>
         </div>
 
-        
+
         <!------2 row para o texto dos copyrights---->
         <div class="row">
         <p class="copyright">Copyright &copy; 2018 by Epsilon Music. All rights reserved.</p>
-        
+
         </div>
-        
+
         </footer>
 
 

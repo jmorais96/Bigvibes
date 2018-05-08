@@ -90,7 +90,7 @@ section {
             padding: 1%;
             border-radius: 5px;
             border: 2px solid transparent;
-            
+
         }
 
         .btn:hover {
@@ -138,17 +138,17 @@ section.divider:after {
     top: 102%;
 }​
 */
-    
 
 
-    
+
+
 
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
 
 
-    
+
   /*FIRST NAVI*/
 .menu,
 .menu > li {
@@ -304,11 +304,11 @@ section.divider:after {
     position:relative;
     width:500%; /* Number of panes * 100% */
     overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
-        
+
     -moz-animation:carousel 60s infinite;
     -webkit-animation:carousel 60s infinite;
     animation:carousel 60s infinite;
-    
+
 }
 .panes > li{
     position:relative;
@@ -395,7 +395,7 @@ section.divider:after {
     padding: 5px;
     float: left;
     font-size: 150%;
-    margin-right: 25px; 
+    margin-right: 25px;
     margin-left: 5%;
     vertical-align: middle;
 }
@@ -436,7 +436,7 @@ section.divider:after {
 
 .section-artists {
     padding: 0;
-} 
+}
 
 .artists-showcase {
     list-style: none;
@@ -444,7 +444,7 @@ section.divider:after {
     width: 110%;  /* Alinhamento centro */
     margin-left: -5%;  /* Alinhamento centro e full width */
     height: 100%;
-    margin-top: 5%; 
+    margin-top: 5%;
 
 }
 
@@ -479,8 +479,8 @@ section.divider:after {
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
     transition: transform 0.5s, opacity 0.5s, filter 0.5s;
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;  
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;  
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
 }
 
 
@@ -526,7 +526,7 @@ section.divider:after {
 
 
 .info-container>h4 {
-    color: transparent;
+    color: black;
     float: left;
     position: absolute;
     top: 25%;
@@ -535,7 +535,7 @@ section.divider:after {
 }
 
 .info-container>p {
-    color: transparent;
+    color: black;
     float: left;
     position: absolute;
     top: 55%;
@@ -544,13 +544,13 @@ section.divider:after {
 }
 
 
-.info-container:hover,
+/* .info-container:hover,
 .info-container>h4:hover,
 .info-container>p:hover {
     background-color: #fff;
     color: #000;
     transition: background-color 0.5s ease-in;
-}
+} */
 
 
 
@@ -584,7 +584,7 @@ section.divider:after {
     line-height: 145%;
     margin: 0 auto;
     text-align: justify;
-    
+
 }
 
 
@@ -673,7 +673,7 @@ footer::before {
 
 footer {
    background-color: #333;
-    padding:30px; 
+    padding:30px;
     font-size: 80%;
 }
 

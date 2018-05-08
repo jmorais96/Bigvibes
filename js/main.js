@@ -9,7 +9,7 @@ $(document).ready(function(){
   //   $("html").css("background-color", "grey");
   // }
 
-    
+
     /* HOVER DO MENU */
 
   $(".menu a").hover(function(){
@@ -20,9 +20,9 @@ $(document).ready(function(){
       $(this).css("background-color", "#fff");
       $(this).css("color", "#74C8D2");
   });
-    
-    
-    
+
+
+
     /* HOVER DO SUBMENU */
     $(".menu li").hover(function(){
       $(this).find(".sub-menu").css("transition" , "all .5s ease-in-out");
@@ -34,9 +34,9 @@ $(document).ready(function(){
       $(this).find(".sub-menu").css("opacity" , "0");
       $(this).find(".sub-menu").css("display", "none");
     });
-    
-    
-    
+
+
+
     /* HOVER DO ARTISTS */
 
   $(".artist-photo").hover(function(){
@@ -53,34 +53,39 @@ $(document).ready(function(){
           $(this).find(".info-container").hide();
   });
 
-  $(".info-container h4").hover(function(){
-    $(this).css("color", "black");
-    $(this).css("transition", "background-color 0.5s ease-in");
-      }, function(){
-        $(this).css("color", "white");
-        $(this).css("transition", "background-color 0.5s ease-in");
-  });
+  /*pesquisa*/
+$("#submeter").hover(function(){
+  if ($("#song").val()!="") {
+    let artist = $('#song').val();
+    console.log(artist);
+    //construir o url com o valor da caixa de input7
+    let url ='http://musicbrainz.org/ws/2/artist/?query=work:' + artist + '&fmt=json';
+    url=encodeURI(url);
+    //fazer um pedido http get ao serviço MusicBraiz
+    $.get(url,function(response,status){
+      if (status=='success') {
 
-  $(".info-container p").hover(function(){
-    $(this).css("color", "black");
-    $(this).css("transition", "background-color 0.5s ease-in");
-      }, function(){
-        $(this).css("color", "white");
-        $(this).css("transition", "background-color 0.5s ease-in");
-  });
-    
-    
-    
+      }
+      console.log(response);
+    });
+  }
+});
+
+
+
+
+
+
     /*send music*/
-    
+
 const realFileBtn = document.getElementById("realfile");
 const customBtn = document.getElementById("custombtn");
 const customTxt = document.getElementById("customtext");
-    
+
     customBtn.addEventListener("click", function(){
         realFileBtn.click();
     })
-    
+
     realFileBtn.addEventListener("change", function(){
         if (realFileBtn.value) {
             customTxt.innerHTML = realFileBtn.value;
