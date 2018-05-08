@@ -58,14 +58,14 @@ $(document).ready(function(){
 
 $("#submeter").click(function(){
   if ($("#song").val()!="") {
-    let query = $('#song').html;
+    let query = $('#song').val();
 
     let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
     url=encodeURI(url);
 
     $.get(url,function(response,status){
       if (status=='success') {
-        let form = $('#search').html();
+        let form = $('#search').text();
         $('#search').empty();
         $('#search').append($("<button></button>").html("BACK").attr("id","back").css("height", "10%").attr("onclick", "back(form)"));
         $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
@@ -105,5 +105,5 @@ const customTxt = document.getElementById("customtext");
 
 function back(){
   $('#search').empty();
-  $('#search').html=form;
+  $('#search').text(form);
 }
