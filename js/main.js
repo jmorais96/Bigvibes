@@ -8,7 +8,7 @@ $(document).ready(function(){
   // }else if( hour < 20 ){
   //   $("html").css("background-color", "grey");
   // }
-
+  const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 
     /* HOVER DO MENU */
 
@@ -54,16 +54,18 @@ $(document).ready(function(){
   });
 
   /*pesquisa*/
-$("#submeter").hover(function(){
+$("#submeter").click(function(){
   if ($("#song").val()!="") {
-    let artist = $('#song').val();
-    console.log(artist);
-    //construir o url com o valor da caixa de input7
-    let url ='http://musicbrainz.org/ws/2/artist/?query=work:' + artist + '&fmt=json';
+    let query = $('#song').val();
+
+    let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
     url=encodeURI(url);
-    //fazer um pedido http get ao serviço MusicBraiz
+
     $.get(url,function(response,status){
       if (status=='success') {
+        let form =$('#search').html();
+        $('#search').empty();
+        $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "100%").css("height", "100%"));
 
       }
       console.log(response);
