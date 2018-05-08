@@ -1,3 +1,4 @@
+let form ="";
 $(document).ready(function(){
 
   // let data = new Date();
@@ -54,24 +55,27 @@ $(document).ready(function(){
   });
 
   /*pesquisa*/
+
 $("#submeter").click(function(){
   if ($("#song").val()!="") {
-    let query = $('#song').val();
+    let query = $('#song').html;
 
     let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
     url=encodeURI(url);
 
     $.get(url,function(response,status){
       if (status=='success') {
-        let form =$('#search').html();
+        let form = $('#search').html();
         $('#search').empty();
-        $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "100%").css("height", "100%"));
+        $('#search').append($("<button></button>").html("BACK").attr("id","back").css("height", "10%").attr("onclick", "back(form)"));
+        $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
 
       }
-      console.log(response);
     });
   }
 });
+
+
 
 
 
@@ -97,3 +101,9 @@ const customTxt = document.getElementById("customtext");
     })
 
 });
+
+
+function back(){
+  $('#search').empty();
+  $('#search').html=form;
+}
