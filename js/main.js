@@ -1,4 +1,5 @@
-let form ="";
+var  form ="";
+const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 $(document).ready(function(){
 
   // let data = new Date();
@@ -9,7 +10,6 @@ $(document).ready(function(){
   // }else if( hour < 20 ){
   //   $("html").css("background-color", "grey");
   // }
-  const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 
     /* HOVER DO MENU */
 
@@ -56,24 +56,25 @@ $(document).ready(function(){
 
   /*pesquisa*/
 
-$("#submeter").click(function(){
-  if ($("#song").val()!="") {
-    let query = $('#song').val();
-
-    let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
-    url=encodeURI(url);
-
-    $.get(url,function(response,status){
-      if (status=='success') {
-        let form = $('#search').text();
-        $('#search').empty();
-        $('#search').append($("<button></button>").html("BACK").attr("id","back").css("height", "10%").attr("onclick", "back(form)"));
-        $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
-
-      }
-    });
-  }
-});
+// $("#submeter").click(function(){
+//   if ($("#song").val()!="") {
+//     let query = $('#song').val();
+//
+//     let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+//     url=encodeURI(url);
+//
+//     $.get(url,function(response,status){
+//       if (status=='success') {
+//         form = $('#search').html();
+//         //alert(form);
+//         $('#search').empty();
+//         $('#search').append($("<button></button>").html("BACK").attr("id","back").css("height", "10%").attr("onclick", "back()"));
+//         $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
+//
+//       }
+//     });
+//   }
+// });
 
 
 
@@ -104,6 +105,43 @@ const customTxt = document.getElementById("customtext");
 
 
 function back(){
+  //alert (form);
   $('#search').empty();
-  $('#search').text(form);
+  //alert(form)
+  $('#search').html(form);
+}
+
+function pesquisa(){
+  if ($("#song").val()!="") {
+    let query = $('#song').val();
+
+    let url ="http://musicbrainz.org/ws/2/work/?query=work:"+ query +"&fmt=json";
+    url=encodeURI(url);
+
+    $.get(url,function(response,status){
+      if (status=='success' && (typeof response.works[0] !== 'undefined')) {
+        //alert(response.works)
+        let url ="https://www.googleapis.com/youtube/v3/search?q="+query+" "+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+        url=encodeURI(url);
+
+        $.get(url,function(response,status){
+          if (status=='success') {
+            form = $('#search').html();
+            //alert(form);
+            $('#search').empty();
+            $('#search').append($("<button></button>").html("BACK").attr("id","back").css("height", "10%").attr("onclick", "back()"));
+            //$('#search').append($("<div>").html("<p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p>"));
+            $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
+
+          }
+        });
+
+      }else {
+        alert('não foram encontrados resultados para esta musica');
+      }
+    });
+
+
+
+  }
 }
