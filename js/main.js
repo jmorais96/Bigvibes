@@ -21,7 +21,7 @@ $(document).ready(function(){
         /*Muda a cor do hover quando se muda o color scheme*/
         if(color =="red"){
         $(this).css("border-bottom", "2px solid red");
-        
+
 
         }else{
 
@@ -191,7 +191,7 @@ const customTxt = document.getElementById("customtext");
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 100) {
+  if (y > 120) {
     $('#navbar-sticky').fadeIn();
   } else {
     $('#navbar-sticky').fadeOut();
