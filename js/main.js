@@ -14,6 +14,28 @@ $(document).ready(function(){
   // }
 
 
+    /*menu inicial*/
+
+    $(".first-menu li a").hover(function(){
+
+        /*Muda a cor do hover quando se muda o color scheme*/
+        if(color =="red"){
+        $(this).css("border-bottom", "2px solid red");
+        
+
+        }else{
+
+
+        $(this).css("border-bottom", "2px solid #74C8D2");
+        $(this).css("color", "#fff");
+        }
+
+        $(this).css("transition", "all .5s ease-in-out");
+        }, function(){
+          $(this).css("border-bottom", "2px solid transparent");
+          $(this).css("color", "#fff");
+    });
+
 
 
 
@@ -22,16 +44,16 @@ $(document).ready(function(){
   $(".menu a").hover(function(){
 
       /*Muda a cor do hover quando se muda o color scheme*/
-     /* if(color =="red"){
-          $(this).css("background-color", "red");
+      if(color =="red"){
+      $(this).css("background-color", "red");
       $(this).css("color", "#fff");
 
       }else{
-      */
+
 
          $(this).css("background-color", "#74C8D2");
       $(this).css("color", "#fff");
-      //}
+      }
 
       $(this).css("transition", "all .5s ease-in-out");
       }, function(){
@@ -187,7 +209,6 @@ $(document).scroll(function() {
 
     $("#red").click(function(){
         color="red";
-        $("html").css("background-color", "red");
     });
 
 

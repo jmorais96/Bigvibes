@@ -117,7 +117,7 @@ section {
 
 
 
-        
+
 
 
 /*divisor*/
@@ -254,7 +254,7 @@ header {
     width: 100%;
     /* impede que os menus quebrem */
     text-align: center;
-    z-index: 19999; 
+    z-index: 19999;
 }
 
 
@@ -281,10 +281,10 @@ header {
 }
 
 
-.first-menu>li>a:hover {
+/* .first-menu>li>a:hover {
     border-bottom: 2px solid #74C8D2;
     color: #74C8D2;
-}
+} */
 
 
 
@@ -309,7 +309,7 @@ header {
 }
 
 .menu {
-    position: fixed; 
+    position: fixed;
     top:0;
     left: 0;
     width: 100%;
@@ -318,7 +318,7 @@ header {
     /* impede que os menus quebrem */
     text-align: center;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-    z-index: 19999; 
+    z-index: 19999;
 }
 
 .logo {
@@ -416,7 +416,7 @@ header {
     float: right;
     margin-top: 30px;
     cursor: pointer;
-    display: none; 
+    display: none;
 }
 
 
@@ -913,20 +913,15 @@ footer p {
 .js--wp-1,
 .js--wp-3,
 .js--wp-4{
-   opacity: 0;                        
+   opacity: 0;
    -webkit-animation-duration: 1s;
    animation-duration: 1s;
 }
- 
- 
+
+
 .js--wp-1.animated,
 .js--wp-3.animated,
-.js--wp-4.animated{                              
+.js--wp-4.animated{
    opacity: 100;
 }
 */
-
-
-
-
-
