@@ -208,22 +208,14 @@ const customTxt = document.getElementById("customtext");
 
     /*Sticky nav*/
    
-window.onscroll = function() {myFunction()};
-
-
-var navbar = document.getElementById("navbar");
-
-
-var sticky = navbar.offsetTop;
-
-
-function myFunction() {
-  if (window.pageYOffset >= 110) {
-    navbar.classList.add("sticky")
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 300) {
+    $('#navbar-sticky').fadeIn();
   } else {
-    navbar.classList.remove("sticky");
+    $('#navbar-sticky').fadeOut();
   }
-}
+});
     
     
  /*----------------------------------------------------*/   
@@ -265,37 +257,7 @@ function myFunction() {
     
     
 
-    
-    
-    
-    /* Animating sections */
 
-    /*Animations on scroll*/
-    /*Animation 1*/
-  /*  $('.js--wp-1').waypoint(function(direction) {  /* Waypoint*/
-     //   $('.js--wp-1').addClass('animated fadeIn');  /*Select animationçao*/
-//    }, {
-  //      offset: '40%'
-    // }); 
-    
-    
-    
-    
-    /*Animation 3*/
-//    $('.js--wp-3').waypoint(function(direction) { 
-  //      $('.js--wp-3').addClass('animated fadeIn'); 
-    //}, {
-      //  offset: '50%'
-     //});
-    
-    
-    
-    /*Animation 4*/
-    //$('.js--wp-4').waypoint(function(direction) { 
-      //  $('.js--wp-4').addClass('animated fadeIn'); 
-    //}, {
-      //  offset: '50%'
-     //}); 
     
 
     

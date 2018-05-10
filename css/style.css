@@ -122,41 +122,7 @@ section {
 
 /*divisor*/
 
-/*
-section.divider::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 51%;
-  background: #fff;
-  -webkit-transform: skew(0deg, 6deg);
-  -moz-transform: skew(0deg, 6deg);
-  -ms-transform: skew(0deg, 6deg);
-  -o-transform: skew(0deg, 6deg);
-  transform: skew(0deg, 6deg);
-    z-index: -1;
-    top: 102%;
-}
 
-section.divider:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 50%;
-  background: #fff;
-  -webkit-transform: skew(0deg, -6deg);
-  -moz-transform: skew(0deg, -6deg);
-  -ms-transform: skew(0deg, -6deg);
-  -o-transform: skew(0deg, -6deg);
-  transform: skew(0deg, -6deg);
-    z-index: -1;
-    top: 102%;
-}​
-*/
 
 
 /* Color scheme */
@@ -256,9 +222,10 @@ input:checked + .color > .btn1 {
 
 /* Header img */
 header {
-    background-image: url(/img/hero_im1g.jpg);
-    background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url(/img/hero1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(/img/hero1.jpg);
     background-size: cover;
+    background-position: center;
     height: 100vh;
     background-attachment: fixed;
 }
@@ -281,6 +248,19 @@ header {
 
 
   /*FIRST NAVI*/
+
+
+
+
+
+
+
+
+/*------sticky navi----*/
+
+
+
+
 .menu,
 .menu > li {
     margin: 0;
@@ -289,18 +269,22 @@ header {
 }
 
 .menu {
+    position: fixed; 
+    top:0;
+    left: 0;
+    width: 100%;
     background-color: #fff;
     width: 100%;
     /* impede que os menus quebrem */
     text-align: center;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-    z-index: 10000;
+    z-index: 19999; 
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     top: 1.1%;
-    transform: translateY(-5%);
+    transform: translateY(-4%);
     float:  left;
     width: 210px;
     height: auto;
@@ -342,45 +326,6 @@ header {
 
 
 
-//*.menu>li>a:hover {
-//    color: #fff;
-//    background-color: #74C8D2;
-//    transition: all .5s ease-in-out;
-/*/
-
-
-
-/* shadow */
-/*.menu>li>a::after,
-.menu>li>a::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    content: "";
-    opacity: 0;
-}
-
-.menu>li>a::after {
-    top: 100%;
-    background: -webkit-radial-gradient(50% -50%, ellipse, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
-    background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
-}
-
-.menu>li>a::before {
-    top: -5px;
-    background: -webkit-radial-gradient(50% 150%, ellipse, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
-    background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
-}
-
-.menu>li>a:hover::after,
-.menu>ul>li>a:hover::before {
-    opacity: 1;
-} */
-
-
-
 
 /* menu icon */
 .menu>li>a>i {
@@ -403,10 +348,6 @@ header {
     /* transition: all .5s ease-in-out;*/
 }
 
-/* .menu li:hover .sub-menu {
-    z-index: 1;
-    opacity: 1;
-} */
 
 
 .sub-menu li {
@@ -422,35 +363,8 @@ header {
     color: #74C8D2;
 }
 
-/*.sub-menu li a:hover,
-.sub-menu .current-item a {
-    background: #74C8D2;
-    color: #fff;
-    transition: .5s ease-in-out;
-} */
 
 
-/*------sticky navi----*/
-
-.sticky {
-    position: fixed; /*com a posiçao fixa, a navegaçao fica fixa num ponto mesmo fazendo scroll*/
-    top:0;
-    left: 0;
-    width: 100%;
-    z-index: 19999; /*isto quer dizer que a naveghaçao vai sempre para o topo*/
-}
-
-.sticky .logo {
-    position: absolute;
-    top: 1.1%;
-    transform: translateY(9.3%);
-    float:  left;
-    width: 210px;
-    height: auto;
-    overflow: hidden;
-    margin-left: 5%;
-    z-index: 10000;
-}
 
 
 
