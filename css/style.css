@@ -250,6 +250,43 @@ header {
   /*FIRST NAVI*/
 
 
+.first-menu {
+    width: 100%;
+    /* impede que os menus quebrem */
+    text-align: center;
+    z-index: 19999; 
+}
+
+
+.first-menu > li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    z-index: 5000;
+}
+
+
+.first-menu>li>a {
+    font-size: 85%;
+    font-weight: bold;
+    padding: 20px 0;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    z-index: 5000;
+}
+
+
+.first-menu>li>a {
+    color: #74C8D2;
+}
+
+
+
+
+
 
 
 

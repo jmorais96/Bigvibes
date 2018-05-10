@@ -15,7 +15,7 @@ $(document).ready(function(){
     
     
 
-    /* HOVER DO MENU */
+    /* HOVER DO STICKY MENU */
 
   $(".menu a").hover(function(){
       
@@ -42,6 +42,11 @@ $(document).ready(function(){
     
     
     
+    
+    
+    
+    
+    /*--------------------------------------------*/
     
     
     
