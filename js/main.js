@@ -191,7 +191,7 @@ const customTxt = document.getElementById("customtext");
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 120) {
+  if (y > 50) {
     $('#navbar-sticky').fadeIn();
   } else {
     $('#navbar-sticky').fadeOut();
