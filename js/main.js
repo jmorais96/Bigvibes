@@ -1,3 +1,4 @@
+var color="";
 $(document).ready(function(){
 
   // let data = new Date();
@@ -9,19 +10,42 @@ $(document).ready(function(){
   //   $("html").css("background-color", "grey");
   // }
 
+    
+    
+    
+    
 
     /* HOVER DO MENU */
 
   $(".menu a").hover(function(){
-      $(this).css("background-color", "#74C8D2");
-      $(this).css("color", "#fff");
+      
+      /*Muda a cor do hover quando se muda o color scheme*/
+     /* if(color =="red"){
+          $(this).css("background-color", "red");
+      $(this).css("color", "#fff"); 
+      
+      }else{
+      */
+          
+         $(this).css("background-color", "#74C8D2");
+      $(this).css("color", "#fff"); 
+      //}
+      
       $(this).css("transition", "all .5s ease-in-out");
       }, function(){
       $(this).css("background-color", "#fff");
       $(this).css("color", "#74C8D2");
   });
 
-
+/* ------------------------------------------------------------ */
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* HOVER DO SUBMENU */
     $(".menu li").hover(function(){
@@ -36,6 +60,16 @@ $(document).ready(function(){
     });
 
 
+    /* ----------------------------------------------- */
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* HOVER DO ARTISTS */
 
@@ -52,6 +86,18 @@ $(document).ready(function(){
         $(this).find("img").css("filter", "contrast(100%)");
           $(this).find(".info-container").hide();
   });
+    
+    
+    /* ------------------------------------------------------------------ */
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
   /*pesquisa*/
 $("#submeter").hover(function(){
@@ -72,9 +118,16 @@ $("#submeter").hover(function(){
 });
 
 
+/* --------------------------------------------------------- */
 
 
-
+    
+    
+    
+    
+    
+    
+    
 
     /*send music*/
 
@@ -92,6 +145,160 @@ const customTxt = document.getElementById("customtext");
         } else {
             customTxt.innerHTML = "No files chosen, yet!";
         }
-    })
+    });
+    
+    
+    
+    /* ------------------------------------------------------- */
+    
+    
+    
+    
+    
+    
+/*MOBILE NAVIGATION*/
+   $('.js--nav-icon, .menu-js a, .logo').click(function(element){
+        var nav = $('.menu-js');
+        var icon = $('.js--nav-icon i');
+
+        //Gets the class name of the element that triggered the event
+        var clicked = element.target.className;
+
+        //Exists the function if the menu is closed AND the logo-black element (logo image) was clicked
+        if (icon.hasClass('ion-navicon-round') && clicked == 'logo')
+            return;
+
+        //Opens and closes the menu
+        if ($(window).width() < 768){
+            nav.slideToggle(200);
+        }
+
+        //Changes icon states of the menu button
+        if (icon.hasClass('ion-navicon-round')) {
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+        } else {
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+        }
+    });
+
+
+    $(window).resize(function(){
+        var nav = $('.menu-js');
+        var icon = $('.js--nav-icon i');
+
+        if ($(window).width() > 767){
+            nav.css("display", "block");
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+        } else {
+            nav.css("display", "none");
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+        }
+
+    });
+    
+    
+    
+    
+    
+    /* -------------------------------------------------------- */
+
+    /*Sticky nav*/
+   
+window.onscroll = function() {myFunction()};
+
+
+var navbar = document.getElementById("navbar");
+
+
+var sticky = navbar.offsetTop;
+
+
+function myFunction() {
+  if (window.pageYOffset >= 110) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+    
+    
+ /*----------------------------------------------------*/   
+    
+    
+    
+    
+    
+    /* COLOR SCHEME */
+    
+    $("#red").click(function(){
+        color="red";
+        $("html").css("background-color", "red");
+    });
+
+    
+    
+    
+    
+    
+  /* ---------------------------------------------------- */  
+    
+    
+    
+    
+    
+    
+    /* Smooth scroll */
+    
+    
+    
+    $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+    
+    
+
+    
+    
+    
+    /* Animating sections */
+
+    /*Animations on scroll*/
+    /*Animation 1*/
+  /*  $('.js--wp-1').waypoint(function(direction) {  /* Waypoint*/
+     //   $('.js--wp-1').addClass('animated fadeIn');  /*Select animationçao*/
+//    }, {
+  //      offset: '40%'
+    // }); 
+    
+    
+    
+    
+    /*Animation 3*/
+//    $('.js--wp-3').waypoint(function(direction) { 
+  //      $('.js--wp-3').addClass('animated fadeIn'); 
+    //}, {
+      //  offset: '50%'
+     //});
+    
+    
+    
+    /*Animation 4*/
+    //$('.js--wp-4').waypoint(function(direction) { 
+      //  $('.js--wp-4').addClass('animated fadeIn'); 
+    //}, {
+      //  offset: '50%'
+     //}); 
+    
+
+    
+    
 
 });

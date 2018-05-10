@@ -140,12 +140,110 @@ section.divider:after {
 */
 
 
+/* Color scheme */
+
+.color {
+    display: flex;
+    width: 250px;
+    position: fixed;
+    right: -160px;
+    top: 20%;
+    transition: right 0.5s;
+    z-index: 10000;
+}
+.btn1 {
+    width: 100px;
+    height: 80px;
+    background-color: #74C8D2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 150%;
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    z-index: 10000
+}
+.btn1:hover {
+    background-color: #fff;
+    color: #74C8D2;
+    z-index: 10000
+}
+#btn1 {
+    display: none;
+}
+.palette {
+    box-sizing: border-box;
+    width: 160px;
+    margin: 0;
+    padding: 1rem;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+        z-index: 10000
+}
+.palette h4 {
+    margin: 0 0 0.5em;
+    width: 100%;
+    z-index: 10000
+}
+.palette .box {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    cursor: pointer;
+    opacity: 0.65;
+    z-index: 10000;
+    transition: background-color 350ms;
+}
+.palette .box:hover {
+    opacity: 1;
+}
+.palette .box.red {
+    background-color: red;
+}
+.palette .box.blue {
+    background-color: blue;
+}
+.palette .box.green {
+    background-color: green;
+}
+.palette .box.purple {
+    background-color: purple;
+}
+.palette .box.orange {
+    background-color: orange;
+}
+.palette .box.black {
+    background-color: black;
+}
+input:checked + .color {
+    right: 0;
+}
+input:checked + .color > .btn1 {
+        background-color: #fff;
+    color: #74C8D2;
+}
+
+
 
 
 
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.29)), url(/img/hero_im1g.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
 
 
 
@@ -154,6 +252,7 @@ section.divider:after {
 .menu > li {
     margin: 0;
     padding: 0;
+    z-index: 10000;
 }
 
 .menu {
@@ -161,6 +260,8 @@ section.divider:after {
     width: 100%;
     /* impede que os menus quebrem */
     text-align: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
 }
 
 .logo {
@@ -172,11 +273,13 @@ section.divider:after {
     height: auto;
     overflow: hidden;
     margin-left: 5%;
+    z-index: 10000;
 }
 
 .menu {
     text-align: right;
     padding: 0;
+    z-index: 5000;
 }
 
 .menu > li {
@@ -186,10 +289,12 @@ section.divider:after {
     display: inline-block;
     width: 14%;
     text-align: center;
+    z-index: 5000;
 }
 
 .menu > li:last-child {
     margin-right: 5%;
+    z-index: 5000;
 }
 
 .menu>li>a {
@@ -199,7 +304,10 @@ section.divider:after {
     color: #74C8D2;
     text-decoration: none;
     display: block;
+    z-index: 5000;
 }
+
+
 
 //*.menu>li>a:hover {
 //    color: #fff;
@@ -207,7 +315,10 @@ section.divider:after {
 //    transition: all .5s ease-in-out;
 /*/
 
-.menu>li>a::after,
+
+
+/* shadow */
+/*.menu>li>a::after,
 .menu>li>a::before {
     position: absolute;
     top: 0;
@@ -233,8 +344,12 @@ section.divider:after {
 .menu>li>a:hover::after,
 .menu>ul>li>a:hover::before {
     opacity: 1;
-}
+} */
 
+
+
+
+/* menu icon */
 .menu>li>a>i {
     vertical-align: middle;
 }
@@ -242,7 +357,6 @@ section.divider:after {
 
 
 /* submenu */
-
 .sub-menu {
     display: none;
     width: 100%;
@@ -283,42 +397,95 @@ section.divider:after {
 } */
 
 
+/*------sticky navi----*/
+
+.sticky {
+    position: fixed; /*com a posiçao fixa, a navegaçao fica fixa num ponto mesmo fazendo scroll*/
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 19999; /*isto quer dizer que a naveghaçao vai sempre para o topo*/
+}
+
+.sticky .logo {
+    position: absolute;
+    top: 1.1%;
+    transform: translateY(9.3%);
+    float:  left;
+    width: 210px;
+    height: auto;
+    overflow: hidden;
+    margin-left: 5%;
+    z-index: 10000;
+}
+
+
+
+
+
+
+/*------Mobile navi----*/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none; 
+}
+
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #74C8D2;
+}
+
+
+
+
+
+
 
 /* SLIDER */
 
-
+/*
 .carousel{
   width:100%;
     clip-path: ellipse(100% 95% at 50% 0%);
+    z-index: 4999;
 }
 .panes{
   width:500%;
+    z-index: 4999;
 }
 
 .carousel{
     overflow:hidden;
     width:100%;
+    z-index: 4999;
 }
 .panes{
     list-style:none;
     position:relative;
     width:500%; /* Number of panes * 100% */
-    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+  /*  overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
 
-    -moz-animation:carousel 60s infinite;
+  /*  -moz-animation:carousel 60s infinite;
     -webkit-animation:carousel 60s infinite;
     animation:carousel 60s infinite;
+    z-index: 4999;
 
 }
+
 .panes > li{
     position:relative;
     float:left;
     width:20%; /* 100 / number of panes */
+  /*  z-index: 4999;
 }
 .carousel img{
     display:block;
     width:100%;
     max-width:100%;
+    z-index: 4999;
 }
 
 @keyframes carousel{
@@ -339,10 +506,7 @@ section.divider:after {
     87.5% { left:-100%; }
     98.5% { left:-100%; }
     100%  { left:0; }
-}
-
-
-
+} */
 
 
 
@@ -357,7 +521,6 @@ section.divider:after {
 .section-search {
     background-color: white;
     margin-top: -2%;
-    opacity: 80%;
     z-index: 2;
 }
 
@@ -750,3 +913,33 @@ footer p {
     text-align: center;
     margin-top: 10px;
 }
+
+
+
+
+
+/* ---------------------------------------------- */
+/* ANIMATIONS */
+/* ---------------------------------------------- */
+/*
+
+.js--wp-1,
+.js--wp-3,
+.js--wp-4{
+   opacity: 0;                        
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+}
+ 
+ 
+.js--wp-1.animated,
+.js--wp-3.animated,
+.js--wp-4.animated{                              
+   opacity: 100;
+}
+*/
+
+
+
+
+

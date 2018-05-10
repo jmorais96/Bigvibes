@@ -2,13 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Epsilon Music is gives you music to your ears.">  
+      
+      
+      
     <title>Epsilon Music</title>
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/Grid.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/style.css">
+      
+    <!-- Animate css -->  
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+      
+    <!-- CSS grid -->
+    <link rel="stylesheet" type="text/css" href="css/Grid.css">
+      
+    <!-- Normalize CSS -->  
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      
+    <!-- Icons -->  
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+      
+    <!-- Media Queries -->  
+    <link rel="stylesheet" type="text/css" href="css/queries.css">
+      
+    <!-- CSS Document -->  
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
   </head>
   <body>
@@ -19,26 +36,68 @@
       <!--------------- HEADER ------------------------>
 
     <header>
+        
+        
 
-        <nav>
         <div class="row">
-            <img class="logo" src="img/logo.png" alt="logo">
+        <nav id="navbar">
+            <img id="logo" class="logo" src="img/logo.png" alt="logo">
+            
+            
           <ul class="menu menu-js">
+              
             <li><a href="#search"><i class="ion-ios-search-strong icon-small clearfix"></i>SEARCH</a></li>
+              
             <li><a href="#top_artists"><i class="ion-ios-people icon-small clearfix"></i>TOP ARTISTS</a></li>
+              
             <li><a href="#about_us"><i class="ion-ios-person icon-small clearfix"></i>ABOUT US</a></li>
+              
             <li><a href="#contacts"><i class="ion-ios-telephone icon-small clearfix"></i>CONTACTS</a></li>
+              
             <li><a href=""><i class="ion-ios-unlocked icon-small clearfix"></i>SETTINGS</a><ul class="sub-menu">
+                
                 <li><a href="#">LOGIN</a></li>
-                <li><a href="#">REGISTER</a></li>
+                <li><a href="/login/index.html">REGISTER</a></li>
                 </ul>
                 </li>
           </ul>
-        </div>
+            
+            
+            
+            
+            
+            
+            <!------- Mobile navi button ----->
+            <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
         </nav>
+        </div>
+        
+        
+        
+        <svg path="M0,0S1.209,1.508,200.671,7.031C375.088,15.751,454.658,30,600,30V0H0ZM1200,0s-90.21,1.511-200.671,7.034C824.911,15.751,745.342,30,600,30V0h600Z"></svg>
+        
+        
+        <!----- color scheme ---->
+        
+        <input type="checkbox" id="btn1">
+<div class="color">
+    <label for="btn1" class="btn1" role="checkbox"><i class="ion-android-options"></i></label>
+    <div class="palette">
+        <h4>Cores</h4>
+        <div class="box red" id="red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+        <div class="box purple"></div>
+        <div class="box orange"></div>
+        <div class="box black"></div>
+    </div>
+</div>
+        
+        
+		
 
 
-  <div class=carousel>
+ <!--- <div class=carousel>
 
   <ul class=panes>
 
@@ -66,7 +125,7 @@
 
 
 
-</div>
+</div> --->
 
 
 
@@ -83,7 +142,7 @@
 
 
     <!--------- SECTION SEARCH ------------>
-     <section class="section-search" id="search">
+     <section class="section-search js--section-search" id="search">
         <div class="row">
           <h1>SEARCH YOUR VIBE</h1>
         </div>
@@ -104,8 +163,8 @@
 
 
 
-        <div class="search-form">
-        <div class="row">
+        <div class="search-form wow fadeIn">
+        <div class="row ">
                 <input class="search-field" type="text" id="artist" placeholder="ARTIST NAME" value=""> <br>
         </div>
 
@@ -187,7 +246,7 @@
                     <figure class="artist-photo">
                         <img src="img/avicci.jpg" alt="Avicci">
                         <div class="info-container">
-                        <h4>LOGIC</h4>
+                        <h4>Avicci</h4>
                         <p>Twitter-API</p>
                         </div>
                     </figure>
@@ -197,7 +256,7 @@
                     <figure class="artist-photo">
                         <img src="img/ed_sheeran.jpg" alt="Ed Sheeran">
                         <div class="info-container">
-                        <h4>LOGIC</h4>
+                        <h4>Ed Sheeran</h4>
                         <p>Twitter-API</p>
                         </div>
                     </figure>
@@ -207,7 +266,7 @@
                     <figure class="artist-photo">
                         <img src="img/eminem.jpg" alt="Eminem">
                         <div class="info-container">
-                        <h4>LOGIC</h4>
+                        <h4>Eminem</h4>
                         <p>Twitter-API</p>
                         </div>
                     </figure>
@@ -228,14 +287,14 @@
         <h1>ABOUT US</h1>
         </div>
 
-            <div class="row">
+            <div class="row wow fadeIn">
                 <div class="image">
             <img src="img/dummy-640x310-1.jpg" alt="">
                 </div>
         </div>
 
 
-        <div class="row">
+        <div class="row js--wp-3">
                 <div class="long-text">
             <p>Aenean at lorem non nisi blandit consequat vel sit amet arcu. Proin nec urna commodo, tincidunt metus non, dictum dui. Donec ut dolor ut eros venenatis pellentesque sit amet a elit. Suspendisse congue arcu sed risus tincidunt ullamcorper. In sodales, orci sit amet aliquam ultrices, odio magna commodo risus, non pellentesque ipsum turpis id felis. Sed aliquam quam eu ex aliquam, sed mattis mauris vulputate. Aliquam interdum lorem vitae est volutpat ultrices. Nam mattis dolor id dolor tincidunt, vitae eleifend lorem mollis. Duis aliquet leo diam, ac mollis erat facilisis id. Vestibulum laoreet nisl vel diam laoreet fringilla. </p>
                     </div>
@@ -251,7 +310,7 @@
 
 
 
-          <div class="row">
+          <div class="row wow fadeIn">
               <div class="contact-form">
                 <!---Primeira Caixa--->
                 <div class="col span-1-of-2">
@@ -315,6 +374,18 @@
 
 
   </body>
+
+    
+    <!-- Latest compiled Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    
+    <!-- JS File -->
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+    
+    <!-- JS File -->
     <script src="js/main.js"></script>
 </html>

@@ -1,0 +1,48 @@
+SOMOS O GRUPO 7
+
+Ideias para o site de webdesign 2:
+
+- Sistema de votação no music player que vai decidir a colocação dos 5 artistas da semana;
+
+- Mudar cor do site conforme a hora do dia;
+
+- Login, registo em popup e info com o user que está online, no menu;
+
+- Barra de pesquisa abaixo do header, a barra de pesquisa inicialmente terá 20vh, mas ao escrever e clicar no botao de pesquisa expandirá para 100vh e apresentará em primeiro plano a galeria do artista, depois puxando para o lado serao disponibilizadas as 5 musicas mais famosas e logo abaixo os generos e albuns mais famosos, depois um botao para ver mais. Ao clicar numa música o music player aparecerá e vai ter a opçao de mostrar o video.
+
+- New realleses no header com shadow atras e o header com um bg todo badass
+
+- Abaixo da pesquisa, seccao do artista do mes, vai conter 5 artistas do mes com os seus ultimos tweets
+
+- Abaixo vai ter o contact form do lado esquerdo da seccao e do lado direito vai ter uma seccao "New artist?" para poder mandar as suas musicas para o site.
+
+- Best of the week
+
+-Botao de like ou dislike para escolher o artista do mes
+
+-aO PESQUISAR UMA MUSICA APARECER SO A MUSICA E APARECER UM BOTAO "RELACIONADOS
+
+- Ao pesquisar por album aparecer o album desejado e aparecer o bota
+
+
+
+
+
+TAREFAS:
+
+----------------------------------------------------------------------------
+IDEIA MALUCA
+- Mapa que mostra as pessoas por perto que estao a ouvir a msma musica que eu, e botao abaixo de "fazer festa" que funcionaria para juntar pessoas para fazer uma festa com a nossa aplicaçao.
+
+
+
+--------------------------------------------------------
+
+-Criei o user Alex, com o nome completo "Alexandre White, palavra passe: 12345, de seguida utilizei o comando "sudo usermod -G sudo alex" para tornar o alex admin.
+- De seguida fiz login com o user alex, fiz updates no ubuntu, fiz upgrades.
+- Foi instalado e montado na maquina o VirtualBox Guest Adittions, foi colocada a ISO no "Setting > Storage" foi colocada como disco e montada dentro da maquina, depois ao tentar montar a iso, nao consegui entao fiz o comando "sudo apt install virtualbox-guest-additions-iso" e montou e instalou tudo o que era necessario, de seguida fiz "cd /media/cdrom" para ir para dentro da pasta "cdrom" e iniciar o guest additions
+- Começei por instalar a maquina lamp, mas antes configurei o netplan, instalei o apache, o mysql e o php com o comando "sudo apt install apache2 mysql-client mysql-server php7.1 php7.1-mysql php7.1-mbstring"
+- De seguida fui a definiçoes de rede na virtualbox para colocar a host-only network no adapter 2 com um dhcp com um ip 192.168.99.100
+- De seguida começei por instalar o redis e o memcached, para instalar o redis primeiro fiz updates e full upgrades, de seguida instalei teste dependencies "sudo apt install build-essential tcl", de seguida fiz donwload do redis com o comando "curl -O http://download.redis.io/redis-stable.tar.gz"
+
+Falling in love is easy, but staying in love is rare!
