@@ -19,14 +19,16 @@ $(document).ready(function(){
     $(".first-menu li a").hover(function(){
 
         /*Muda a cor do hover quando se muda o color scheme*/
-        if(color =="red"){
-        $(this).css("border-bottom", "2px solid red");
+        /*sunrise*/
+        if(color =="sunrise"){
+        $(this).css("border-bottom", "2px solid #fff");
+            
 
 
         }else{
 
 
-        $(this).css("border-bottom", "2px solid #74C8D2");
+        $(this).css("border-bottom", "2px solid #fff");
         $(this).css("color", "#fff");
         }
 
@@ -204,19 +206,414 @@ $(document).scroll(function() {
 
 
 
+/*-------------------------------------------------------------*/
+                        /* COLOR SCHEME */
+/*--------------------------------------------------------------*/    
 
-    /* COLOR SCHEME */
+/* sunrise */
+    
+    /* header hero img */
+     $("#sunrise").click(function(){
+         color="sunrise";
+         $("header").css("background-image", "linear-gradient(rgba(116, 200, 210, 0.7), rgba(0, 0, 0, 0)), url(../img/hero1.jpg)");
+         
+         
+         /* Cor do titulo */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $("h2").css("color", "#74C8D2");
+     });  
+         
+         
+    /* Cor do titulo */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $("h2:after").css("color", "#74C8D2");
+     }); 
+         
+         
+         
+    /* Steps container number */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $(".steps div").css("background-color", "#74C8D2");
+     });     
+         
+         
+         
+     /* Search field border */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $(".search-field").css("border", "2px solid #74C8D2");
+     });   
+         
+         
+         
+         
+         /* Contact field border */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $(".contact-field").css("border", "2px solid #74C8D2");
+     });  
+         
+         
+         
+         /* Send field border */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $(".send-field").css("border", "2px solid #74C8D2");
+     });  
+         
+         
+         
+         /* Custom btn */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $("#custombtn").css("background-color", "#74C8D2");
+     }); 
+         
+         
+         
+         
+         
+         /* Custom btn (botao de enviar musica) hover   FALTA FAZER */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $("#custombtn:hover").css("background-color", "#000");
+     }); 
+         
+         
+         
+         
+         /* footer links */
+    $("#sunrise").click(function(){
+         color="sunrise";
+         $(".social-links li a:link").css("color", "#74C8D2");
+     }); 
+         
+         
+         /* FALTA FAZER OS HOVERS DOS BOTOES */
+         
+         
+     });
+    
+    
+    /*-------------------------------------------------*/
+    
+    
+    
+    
+    
+    
+    
+    /* midday */
+    
+    /* header hero img */
+     $("#mday").click(function(){
+         color="sunrise";
+         $("header").css("background-image", "linear-gradient(rgba(rgba(0, 129, 198, 0.7)), rgba(0, 0, 0, 0)), url(../img/hero1.jpg)");
+         
+         
+         /* Cor do titulo */
+    $("#mday").click(function(){
+         color="sunrise";
+         $("h2").css("color", "#0081C6");
+     });  
+         
+         
+    /* Cor do titulo */
+    $("#mday").click(function(){
+         color="sunrise";
+         $("h2:after").css("color", "#0081C6");
+     }); 
+         
+         
+         
+    /* Steps container number */
+    $("#mday").click(function(){
+         color="sunrise";
+         $(".steps div").css("background-color", "#0081C6");
+     });     
+         
+         
+         
+     /* Search field border */
+    $("#mday").click(function(){
+         color="sunrise";
+         $(".search-field").css("border", "2px solid #0081C6");
+     });   
+         
+         
+         
+         
+         /* Contact field border */
+    $("#mday").click(function(){
+         color="sunrise";
+         $(".contact-field").css("border", "2px solid #0081C6");
+     });  
+         
+         
+         
+         /* Send field border */
+    $("#mday").click(function(){
+         color="sunrise";
+         $(".send-field").css("border", "2px solid #0081C6");
+     });  
+         
+         
+         
+         /* Custom btn */
+    $("#mday").click(function(){
+         color="sunrise";
+         $("#custombtn").css("background-color", "#0081C6");
+     }); 
+         
+         
+         
+         
+         
+         /* Custom btn (botao de enviar musica) hover   FALTA FAZER */
+    $("#mday").click(function(){
+         color="sunrise";
+         $("#custombtn:hover").css("background-color", "#0081C6");
+     }); 
+         
+         
+         
+         
+         /* footer links */
+    $("#mday").click(function(){
+         color="sunrise";
+         $(".social-links li a:link").css("color", "#0081C6");
+     }); 
+         
+         
+         /* FALTA FAZER OS HOVERS DOS BOTOES */
+         
+         
+     });
+    
+    
+    
+    
+    
+    
+    
+    
+    /*-------------------------------------------------*/
+    
+    
+    
+    
+    
+    
+    
+    /* sunset */
+    
+    /* header hero img */
+     $("#sunset").click(function(){
+         color="sunset";
+         $("header").css("background-image", "linear-gradient(rgba(rgba(rgba(229, 92, 58, 0.7))), rgba(0, 0, 0, 0)), url(../img/hero1.jpg)");
+         
+         
+         /* Cor do titulo */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $("h2").css("color", "#E55C3A");
+     });  
+         
+         
+    /* Cor do titulo */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $("h2:after").css("color", "#E55C3A");
+     }); 
+         
+         
+         
+    /* Steps container number */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $(".steps div").css("background-color", "#E55C3A");
+     });     
+         
+         
+         
+     /* Search field border */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $(".search-field").css("border", "2px solid #E55C3A");
+     });   
+         
+         
+         
+         
+         /* Contact field border */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $(".contact-field").css("border", "2px solid #E55C3A");
+     });  
+         
+         
+         
+         /* Send field border */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $(".send-field").css("border", "2px solid #E55C3A");
+     });  
+         
+         
+         
+         /* Custom btn */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $("#custombtn").css("background-color", "#E55C3A");
+     }); 
+         
+         
+         
+         
+         
+         /* Custom btn (botao de enviar musica) hover   FALTA FAZER */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $("#custombtn:hover").css("background-color", "#E55C3A");
+     }); 
+         
+         
+         
+         
+         /* footer links */
+    $("#sunset").click(function(){
+         color="sunrise";
+         $(".social-links li a:link").css("color", "#E55C3A");
+     }); 
+         
+         
+         /* FALTA FAZER OS HOVERS DOS BOTOES */
+         
+         
+     });
+    
+    
+    
+    
+    
+    /*-----------------------------------------------------------*/
+    
+    
+    
+    
+    /* night */
+    
+    /* header hero img */
+     $("#night").click(function(){
+         color="sunrise";
+         $("header").css("background-image", "linear-gradient(rgba(rgba(21, 35, 66, 0.7)), rgba(0, 0, 0, 0)), url(../img/hero1.jpg)");
+         
+         
+         /* Cor do bg */
+    $("#night").click(function(){
+         color="sunrise";
+         $("html").css("background", "#131721");
+     });  
+         
+         
+         
+         /* section color */
+    $("#night").click(function(){
+         color="sunrise";
+         $("section").css("background-color", "#131721");
+     });  
+         
+         
+         
+         
+         /* Cor do titulo */
+    $("#night").click(function(){
+         color="sunrise";
+         $("h2").css("color", "#fff");
+     });  
+         
+         
+    /* Cor do titulo */
+    $("#night").click(function(){
+         color="sunrise";
+         $("h2:after").css("color", "#fff");
+     }); 
+         
+         
+         
+    /* Steps container number */
+    $("#night").click(function(){
+         color="sunrise";
+         $(".steps div").css("background-color", "#fff");
+     });     
+         
+         
+         
+     /* Search field border */
+    $("#night").click(function(){
+         color="sunrise";
+         $(".search-field").css("border", "2px solid #fff");
+     });   
+         
+         
+         
+         
+         /* Contact field border */
+    $("#night").click(function(){
+         color="sunrise";
+         $(".contact-field").css("border", "2px solid #fff");
+     });  
+         
+         
+         
+         /* Send field border */
+    $("#night").click(function(){
+         color="sunrise";
+         $(".send-field").css("border", "2px solid #fff");
+     });  
+         
+         
+         
+         /* Custom btn */
+    $("#night").click(function(){
+         color="sunrise";
+         $("#custombtn").css("background-color", "#fff");
+     }); 
+         
+         
+         
+         
+         
+         /* Custom btn (botao de enviar musica) hover   FALTA FAZER */
+    $("#night").click(function(){
+         color="sunrise";
+         $("#custombtn:hover").css("background-color", "#fff");
+     }); 
+         
+         
+         
+         
+         /* footer links */
+    $("#night").click(function(){
+         color="sunrise";
+         $(".social-links li a:link").css("color", "#fff");
+     }); 
+         
+         
+         /* FALTA FAZER OS HOVERS DOS BOTOES */
+         
+         
+     });
 
-    $("#red").click(function(){
-        color="red";
-    });
 
 
+/*-------------------------------------------------------------*/
+                    /* END OF COLOR SCHEME */
+/*--------------------------------------------------------------*/
 
-
-
-
-  /* ---------------------------------------------------- */
 
 
 

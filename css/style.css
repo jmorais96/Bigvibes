@@ -20,6 +20,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 300;
+    background: #fff;
   text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
@@ -91,7 +92,7 @@ h5 {
 
 
 
-        h2:after {
+        h2::after {
             display: block;
             height: 5px;
             background-color: #74C8D2;
@@ -133,8 +134,6 @@ h5 {
             text-decoration: none;
             transition: all 0.5s ease-in-out;
         }
-
-
 
 
 
@@ -251,7 +250,7 @@ input:checked + .color > .btn-color {
 /* Header img */
 header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url(../img/hero1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../img/hero1.jpg);
+    background-image: linear-gradient(rgba(116, 200, 210, 0.7), rgba(0, 0, 0, 0)), url(../img/hero1.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -269,6 +268,13 @@ header {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%)
+}
+
+.logo-hero {
+    position: absolute;
+    left: -2.7%;
+    top: -55%;
+    width: 30%;
 }
 
 
@@ -752,9 +758,19 @@ header {
     background-color: white;
 }
 
+.image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    top: 50%;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+
 .image img {
-    width: 40%;
-    margin: 0 auto;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
 }
 
 .long-text p {
@@ -844,10 +860,6 @@ header {
 /* ---------------------------------------------- */
 
 
-footer::before {
-   border-top: 10px solid #74C8D2;
-    height: 5px;
-}
 
 footer {
    background-color: #333;
