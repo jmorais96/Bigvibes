@@ -528,7 +528,8 @@ $(document).scroll(function() {
                     alert(i);
                       $.get(url,function(response,status){
                         if (status=='success') {
-                          $("#topmusic"+ i + " figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css('height', "300px");
+                          $("#topmusic"+ i + " figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                          $("#topmusic"+ i + " figure div h6").html(response.items[0].snippet.title);
                         }
                       });
                   }
