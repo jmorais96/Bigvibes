@@ -1,6 +1,7 @@
 $("#navbar-sticky").hide();
 $(".div-pesquisa").hide();
 $(".div-biography").hide();
+$(".player").hide();
 var color="";
 var form ="";
 const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
@@ -522,7 +523,7 @@ $(document).scroll(function() {
                 if (status=='success') {
                   for (var i = 0; i < 3; i++){
 
-                    url ="https://www.googleapis.com/youtube/v3/search?q="+response.media[0].tracks[i].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                    url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +response.media[0].tracks[i].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
                     url=encodeURI(url);
                     //alert(url);
                     alert(i);
@@ -530,6 +531,11 @@ $(document).scroll(function() {
                         if (status=='success') {
                           $("#topmusic"+ i + " figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
                           $("#topmusic"+ i + " figure div h6").html(response.items[0].snippet.title);
+                          $("#topmusic"+ i + " figure img").click(function(){
+                            $(".div-pesquisa").hide();
+                            $(".player").show();
+                            $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
+                          });
                         }
                       });
                   }

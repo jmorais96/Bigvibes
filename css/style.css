@@ -1292,3 +1292,8 @@ footer p {
     top: 40%;
     z-index: 1000;
 }
+
+/*player*/
+.player{
+  width: 100%;
+}
