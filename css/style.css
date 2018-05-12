@@ -945,75 +945,36 @@ footer p {
 
 
 
+
+
+
+
+
 /* ---------------------------------------------- */
-/* ANIMATIONS */
+/* RESULTADO PESQUISA ARTISTA */
 /* ---------------------------------------------- */
-/*
-
-.js--wp-1,
-.js--wp-3,
-.js--wp-4{
-   opacity: 0;
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
-}
 
 
-.js--wp-1.animated,
-.js--wp-3.animated,
-.js--wp-4.animated{
-   opacity: 100;
-}
-*/
-
-/* resultado artista */
-
+/*container da pesquisa*/
 .div-pesquisa {
     position: absolute;
     z-index: 50000;
+    top: 120.8%;
 }
 
 
+/*estilização do titulo "you searched for...*/
 .div-pesquisa h3 {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 
-.result-info {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
 
-.result-info button {
-            width: 32%;
-            margin-top: 4%;
-            color: #fff;
-            background-color: #74C8D2;
-            padding: 1%;
-            border-radius: 5px;
-            border: 2px solid transparent;
-            text-decoration: none;
-        }
-
-.result-info button:hover {
-            background-color: #fff;
-            color: #74c8d2;
-            border: 2px solid #74C8D2;
-            text-decoration: none;
-            transition: all 0.5s ease-in-out;
-        }
-
-
-.pesquisa-2 {
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    margin-top: -1%;;
-    top: -80%;
-}
-
+/*container da pesquisa*/
 .pesquisa {
     list-style: none;
     display: inline-block;
@@ -1024,25 +985,181 @@ footer p {
 }
 
 
-.pesquisa li,
-.pesquisa-2 li {
+.pesquisa li {
     display: block;
     float: left;
     width: 20%;
+    height: 270px;
 }
 
 
-.Music-img {
+/*Botao para voltar ao form de pesquisa*/
+.go-back-btn {
+    display: block;
+    float: left;
     width: 100%;
     height: 100%;
-    margin:0;
-    overflow: hidden;
+    border: 0;
+    color: #74C8D2;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.go-back-btn:hover {
+    background-color: #74C8D2;
+    color: #fff;
+}
+
+.go-back-btn i {
+    display: block;
+    font-size: 250%;
 }
 
 
 
 
-.Music-img img {
+
+
+
+
+/*Botao para ver mais resultados*/
+.see-more-btn {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    color: #74C8D2;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.see-more-btn:hover {
+    background-color: #74C8D2;
+    color: #fff;
+}
+
+.see-more-btn i {
+    display: block;
+    font-size: 250%;
+}
+
+
+
+/*imagem da musica do artista */
+.music-img {
+    width: 100%;
+    height: 300px;
+    margin:0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+ /* ===== */
+.pesquisa li img {
+    opacity: 0.7;
+    transform: scale(1.18);
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.pesquisa li img:hover {
+    opacity: 1;
+    transform: scale(1.03);
     width: 100%;
     height: auto;
 }
+
+
+/* ----------------------------- IMPORTANTE ---------------------*/
+/*info da musica (ANIMAR E FAZER COM QUE AO FAZER HOVER NA MUSICA APAREÇA*/
+.info-music {
+    margin: 0 auto;
+    display: none;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    top: -35%;
+    position: relative;
+    z-index: 1000;
+}
+
+.info-music h6 {
+    display: none;
+    color: #fff;
+    text-align: center;
+    font-size: 100%;
+    position: relative;
+    top: 40%;
+    z-index: 1000;
+}
+
+
+
+
+/*Container dos botoes*/
+.result-info {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.result-info li {
+    display: block;
+    float: left;
+    width: 33.33%;
+    z-index: 1;
+}
+
+.result-info button {
+            width: 100%;
+            height: 200px;
+            margin-top: -1%;
+            color: #fff;
+            border: 0;
+            background-color: #74C8D2;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+
+.result-info button:hover {
+            background-color: #fff;
+            color: #74C8D2;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+.result-info li button i {
+            display: block;
+            font-size: 250%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

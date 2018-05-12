@@ -582,9 +582,9 @@ $(document).scroll(function() {
               form = $('#search').html();
               //alert(form);
               $('#search').empty();
-              $('#search').append($("<button></button>").html("BACK").css("height", "10%").attr("onclick", "backForm()"));
+              $('#search').append($("<button></button>").html("GO BACK TO THE SEARCH").css("height", "70px").css("width", "100%").css("background-color", "#74C8D2").css("color", "#fff").css("border", "2px solid transparent").attr("onclick", "backForm()"));
               //$('#search').append($("<div>").html("<p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p>"));
-              $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("width", "90%").css("height", "100%"));
+              $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%"));
 
             }
           });

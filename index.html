@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
     <!-- Icons -->
-    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/>
 
     <!-- Media Queries -->
     <link rel="stylesheet" type="text/css" href="css/queries.css">
@@ -79,15 +79,15 @@
 
           <ul class="menu menu-js">
 
-            <li><a href="#search"><i class="ion-ios-search-strong icon-small clearfix"></i>SEARCH</a></li>
+            <li><a href="#search"><i class="ion-ios-search icon-small clearfix"></i>SEARCH</a></li>
 
-            <li><a href="#top_artists"><i class="ion-ios-people icon-small clearfix"></i>TOP ARTISTS</a></li>
+            <li><a href="#top_artists"><i class="ion-ios-radio-button-on icon-small clearfix"></i>TOP ARTISTS</a></li>
 
-            <li><a href="#about_us"><i class="ion-ios-person icon-small clearfix"></i>ABOUT US</a></li>
+            <li><a href="#about_us"><i class="ion-ios-happy icon-small clearfix"></i>ABOUT US</a></li>
 
-            <li><a href="#contacts"><i class="ion-ios-telephone icon-small clearfix"></i>CONTACTS</a></li>
+            <li><a href="#contacts"><i class="ion-ios-chatbubbles icon-small clearfix"></i>CONTACTS</a></li>
 
-            <li><a href=""><i class="ion-ios-unlocked icon-small clearfix"></i>SETTINGS</a><ul class="sub-menu">
+            <li><a href=""><i class="ion-ios-contact icon-small clearfix"></i>ACCOUNT</a><ul class="sub-menu">
 
                 <li><a href="#">LOGIN</a></li>
                 <li><a href="/login/index.html">REGISTER</a></li>
@@ -238,57 +238,196 @@
          </div>
 
        </div>
+         
+         
+         
+         
+         <!----------- Resultado de pesquisa de artista----------->
 
             <div class="div-pesquisa">
-              <div class="row">
-                <h2>SEARCH YOUR VIBE</h2>
-              </div>
+
                      <div class="row">
                          <h3>You searched for...</h3>
                          </div>
 
-                         <div class="result-info">
-                        <button type="button" name="button" id="your-playlist">your playlist</button>
-                        <button type="button" name="button" id="top-albums">top albums</button>
-                        <button type="button" name="button" id="biography">Biography</button>
-                      </div>
 
                      <ul class="pesquisa Clearfix">
 
-                            <li>
-                                <figure class="Music-img">
-                                    <img src="img/dummy-640x310-1.jpg" alt="Music-1">
+                                <li><button class="go-back-btn" type="button" name="button" id="your-playlist"><i class="ion-ios-arrow-back"></i>GO BACK</button></li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-1">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div>    
                                 </figure>
                             </li>
 
                           <li>
-                                <figure class="Music-img">
-                                    <img src="img/dummy-640x310-2.jpg" alt="Music-1">
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-2">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
                                 </figure>
                             </li>
 
                           <li>
-                                <figure class="Music-img">
-                                    <img src="img/dummy-640x310-3.jpg" alt="Music-1">
+                                <figure class="music-img">
+                                    <div><img src="img/300.png" alt="Music-3"></div>
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
                                 </figure>
                             </li>
-
-                          <li>
-                                <figure class="Music-img">
-                                    <img src="img/dummy-640x310-4.jpg" alt="Music-1">
-                                </figure>
-                            </li>
-                            <li>
-                                  <figure class="Music-img">
-                                      <img src="img/300.png" alt="Music-1">
-                                  </figure>
-                              </li>
-
-
+                         
+                         
+                            <li><button class="see-more-btn" href="#more-music" type="button" name="button" id="your-playlist"><i class="ion-ios-add"></i>SEE MORE</button></li>
 
                         </ul>
+                
+                
+                
+                
+                <ul class="result-info">
+                        <li><button type="button" name="button" id="your-playlist"><i class="ion-ios-musical-notes"></i>PLAYLISTS</button></li>
+                    
+                        <li><button type="button" name="button" id="top-albums"><i class="ion-ios-albums"></i>TOP ALBUMS</button></li>
+                    
+                        <li><button type="button" name="button" id="biography"><i class="ion-ios-person"></i>BIOGRAPHY</button></li>
+                      </ul>
 
                        </div>
+         
+         
+         
+         
+         
+         
+         <!------------------------- SEE MORE MUSIC ----------------------------->
+         
+         <div class="container-more-music" id="more-music">
+
+                     <div class="row">
+                         <h3>You searched for...</h3>
+                         </div>
+
+
+                     <ul class="see-more-music-1 Clearfix">
+
+                                <li><button class="go-back-btn" type="button" name="button" id="your-playlist"><i class="ion-ios-arrow-back"></i>GO BACK</button></li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-1">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div>    
+                                </figure>
+                            </li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-2">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <div><img src="img/300.png" alt="Music-3"></div>
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+                         
+                         
+                         
+                         <li>
+                                <figure class="music-img">
+                                    <div><img src="img/300.png" alt="Music-3"></div>
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+                         
+                         
+                         
+                            
+
+                        </ul>
+                
+                
+                
+                
+                <ul class="see-more-music-2 Clearfix">
+                        <li>
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-1">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div>    
+                                </figure>
+                            </li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <img src="img/300.png" alt="Music-2">
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+
+                          <li>
+                                <figure class="music-img">
+                                    <div><img src="img/300.png" alt="Music-3"></div>
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+                         
+                         
+                         
+                         <li>
+                                <figure class="music-img">
+                                    <div><img src="img/300.png" alt="Music-3"></div>
+                                    <div class="info-music">
+                                    <h6>Rap God</h6>
+                                    </div> 
+                                </figure>
+                            </li>
+                    
+                            <li><button class="see-more-btn" type="button" name="button" id="your-playlist"><i class="ion-ios-add"></i>SEE MORE</button></li>
+                              </ul>
+
+                       </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
 
                        <div class="div-biography">
 
