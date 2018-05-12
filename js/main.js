@@ -498,11 +498,71 @@ $(document).scroll(function() {
   $("#submeter").click(function(){
     if ($("#artist").val()!="") {
 
+      let query = $("#artist").val()
+
+      let url ="http://musicbrainz.org/ws/2/artist/?query=artist:"+ query +"&fmt=json";
+      url=encodeURI(url);
+
+      $.get(url,function(response,status){
+        if (status=='success') {
+          //alert(response.works)
+          //alert(query);
+          $(".form").hide();
+          $(".div-pesquisa").show();
+          $(".div-pesquisa h3").html("You searched for \" " + $("#artist").val() +  " \" ");
+
+          $("#top-albums").click(function(){
+            $(".div-pesquisa").hide();
+            //alert(response.artists[0].id);
+            url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
+            url=encodeURI(url);
+            //alert(url);
+            $.get(url,function(response,status){
+              if (status=='success') {
+            for (result of response.releases) {
+              //alert(result.id);
+              url ="http://coverartarchive.org/release/" + result.id;
+              url=encodeURI(url);
+              $.get(url,function(response,status){
+                if (status=='success') {
+                  //alert(response.images[0].thumbnails.small);
+                  $("#search").append($("<img>").attr("src", response.images[0].thumbnails.small));
+                }else {
+                  $("#search").append($("<img>").attr("src", "nope"));
+                }
+              });
+
+            }
+
+              //query = response.artists[0].id;
+
+            }
+          });
+        });
+
+
+          // let url ="https://www.googleapis.com/youtube/v3/search?q="+query+" "+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+          // url=encodeURI(url);
+          //
+          // $.get(url,function(response,status){
+          //   if (status=='success') {
+          //
+          //     $(".form").hide();
+          //     $(".div-pesquisa").show();
+          //     $(".div-pesquisa h3").html("You searched for \" " + query +  " \" ");
+          //
+          //   }
+          // });
+
+        }else {
+          alert('não foram encontrados resultados para este artista');
+        }
+      });
+
       //form = $('#search').html();
       //$('#search').empty();
       //alert('aqui');
-      $(".form").hide();
-      $(".div-pesquisa").show();
+
 
 
     } else if ($("#song").val()!="") {
