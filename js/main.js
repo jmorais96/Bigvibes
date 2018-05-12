@@ -521,24 +521,60 @@ $(document).scroll(function() {
               url=encodeURI(url);
               $.get(url,function(response,status){
                 if (status=='success') {
-                  for (var i = 0; i < 3; i++){
+                  //for (var i = -1; i < 3 ; i++){
 
-                    url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +response.media[0].tracks[i].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+
+                  url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +response.media[0].tracks[0].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                  url=encodeURI(url);
+                  //alert(url);
+                  //alert(i);
+                    $.get(url,function(response,status){
+                      if (status=='success') {
+                        $("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                        $("#topmusic1 figure div h6").html(response.items[0].snippet.title);
+                        $("#topmusic1 figure img").click(function(){
+                          $(".div-pesquisa").hide();
+                          $(".player").show();
+                          $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
+                        });
+                      }
+                    });
+
+
+                    url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +response.media[0].tracks[1].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
                     url=encodeURI(url);
                     //alert(url);
-                    alert(i);
+                    //alert(i);
                       $.get(url,function(response,status){
                         if (status=='success') {
-                          $("#topmusic"+ i + " figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
-                          $("#topmusic"+ i + " figure div h6").html(response.items[0].snippet.title);
-                          $("#topmusic"+ i + " figure img").click(function(){
+                          $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                          $("#topmusic2 figure div h6").html(response.items[0].snippet.title);
+                          $("#topmusic2 figure img").click(function(){
                             $(".div-pesquisa").hide();
                             $(".player").show();
                             $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
                           });
                         }
                       });
-                  }
+
+
+                      url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +response.media[0].tracks[2].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                      url=encodeURI(url);
+                      //alert(url);
+                      //alert(i);
+                        $.get(url,function(response,status){
+                          if (status=='success') {
+                            $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                            $("#topmusic3 figure div h6").html(response.items[0].snippet.title);
+                            $("#topmusic3 figure img").click(function(){
+                              $(".div-pesquisa").hide();
+                              $(".player").show();
+                              $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
+                            });
+                          }
+                        });
+
+                  //}
                 }
               });
 
