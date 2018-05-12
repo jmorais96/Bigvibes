@@ -511,6 +511,34 @@ $(document).scroll(function() {
           $(".div-pesquisa").show();
           $(".div-pesquisa h3").html("You searched for \" " + $("#artist").val() +  " \" ");
 
+          url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
+          url=encodeURI(url);
+          //alert(url);
+          $.get(url,function(response,status){
+            if (status=='success') {
+              url="http://musicbrainz.org/ws/2/release/"+ response.releases[0].id +"?inc=recordings&fmt=json";
+              url=encodeURI(url);
+              $.get(url,function(response,status){
+                if (status=='success') {
+                  for (var i = 0; i < 3; i++){
+                    url ="https://www.googleapis.com/youtube/v3/search?q="+response.media[0].tracks[i].title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                    url=encodeURI(url);
+                    alert(url);
+                    $.get(url,function(response,status){
+                      if (status=='success') {
+                          $("#topmusic"+ i + " figure img").attr("src", response.items[0].snippet.thumbnails.default.url).attr('width', "response.items[0].snippet.thumbnails.default.width").attr('height', response.items[0].snippet.thumbnails.default.height);
+                      }
+                    });
+                  }
+                }
+              });
+
+            //query = response.artists[0].id;
+
+          }
+        });
+
+
           $("#top-albums").click(function(){
             $(".div-pesquisa").hide();
             //alert(response.artists[0].id);
@@ -594,6 +622,11 @@ $(document).scroll(function() {
         }
       });
     }
+  });
+
+  $("#back-form").click(function(){
+    $(".div-pesquisa").hide();
+    $(".form").show();
   });
 
 
