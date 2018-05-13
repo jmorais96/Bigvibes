@@ -659,6 +659,41 @@ $(document).scroll(function() {
 
 
 
+    } else if($("#album").val()!=""){
+
+        query = $('#album').val();
+
+        let url ='http://musicbrainz.org/ws/2/release/?query=release:' + query + '&fmt=json';
+        url=encodeURI(url);
+        $.get(url,function(response,status){
+          if (status=='success') {
+            $(".form").hide();
+            $(".div-album").show();
+            var album = response.releases[0].id;
+            url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
+            url=encodeURI(url);
+            alert(url);
+              $.get(url,function(response,status){
+                if (status=='success') {
+                    $("#search").empty();
+                    for (music of response.media[0].tracks) {
+                      url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +music.title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                      url=encodeURI(url);
+                      $.get(url,function(response,status){
+                        if (status=='success') {
+                          $("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
+                        }
+                      });
+                    }
+                  }
+                });
+
+
+          }
+        });
+
+
+
     } else if ($("#song").val()!="") {
       query = $('#song').val();
 
