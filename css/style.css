@@ -137,8 +137,17 @@ h5 {
 
 
 
+input[type=text] {
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #74C8D2;
+}
 
-
+::placeholder {
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #74C8D2;
+}
 
 
 
