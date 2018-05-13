@@ -759,6 +759,11 @@ $(document).scroll(function() {
 
   });
 
+  $("#back-form").click(function(){
+    $(".player").hide();
+    $(".form").show();
+  });
+
 });
 
 /* voltar ao form*/
