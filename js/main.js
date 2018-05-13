@@ -530,7 +530,7 @@ $(document).scroll(function() {
                   //alert(i);
                     $.get(url,function(response,status){
                       if (status=='success') {
-                        $("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                        //$("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                         $("#topmusic1 figure div h6").html(response.items[0].snippet.title);
                         $("#topmusic1 figure img").click(function(){
                           $(".div-pesquisa").hide();
@@ -547,7 +547,7 @@ $(document).scroll(function() {
                     //alert(i);
                       $.get(url,function(response,status){
                         if (status=='success') {
-                          $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                         // $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                           $("#topmusic2 figure div h6").html(response.items[0].snippet.title);
                           $("#topmusic2 figure img").click(function(){
                             $(".div-pesquisa").hide();
@@ -564,7 +564,7 @@ $(document).scroll(function() {
                       //alert(i);
                         $.get(url,function(response,status){
                           if (status=='success') {
-                            $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "80%");
+                           // $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                             $("#topmusic3 figure div h6").html(response.items[0].snippet.title);
                             $("#topmusic3 figure img").click(function(){
                               $(".div-pesquisa").hide();
