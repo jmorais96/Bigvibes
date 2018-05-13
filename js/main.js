@@ -610,7 +610,13 @@ $(document).scroll(function() {
                         if (status=='success') {
                             $("#search").empty();
                             for (music of response.media[0].tracks) {
-                                $("#search").append($("<p>").html(music.title));
+                              url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +music.title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                              url=encodeURI(url);
+                              $.get(url,function(response,status){
+                                if (status=='success') {
+                                  $("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
+                                }
+                              });
                             }
                           }
                         });
