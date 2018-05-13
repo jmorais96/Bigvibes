@@ -533,7 +533,7 @@ $(document).scroll(function() {
                       if (status=='success') {
                         //$("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                         $("#topmusic1 figure div h6").html(response.items[0].snippet.title);
-                        $("#topmusic1 figure img").click(function(){
+                        $("#topmusic1 figure i").click(function(){
                           $(".div-pesquisa").hide();
                           $(".player").show();
                           $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
@@ -550,7 +550,7 @@ $(document).scroll(function() {
                         if (status=='success') {
                          // $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                           $("#topmusic2 figure div h6").html(response.items[0].snippet.title);
-                          $("#topmusic2 figure img").click(function(){
+                          $("#topmusic2 figure i").click(function(){
                             $(".div-pesquisa").hide();
                             $(".player").show();
                             $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
@@ -567,7 +567,7 @@ $(document).scroll(function() {
                           if (status=='success') {
                            // $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                             $("#topmusic3 figure div h6").html(response.items[0].snippet.title);
-                            $("#topmusic3 figure img").click(function(){
+                            $("#topmusic3 figure i").click(function(){
                               $(".div-pesquisa").hide();
                               $(".player").show();
                               $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
