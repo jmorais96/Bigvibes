@@ -4,6 +4,7 @@ $(".div-biography").hide();
 $(".player").hide();
 var color="";
 var form ="";
+var query="";
 const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 $(document).ready(function(){
 
@@ -499,7 +500,7 @@ $(document).scroll(function() {
   $("#submeter").click(function(){
     if ($("#artist").val()!="") {
 
-      let query = $("#artist").val()
+      query = $("#artist").val()
 
       let url ="http://musicbrainz.org/ws/2/artist/?query=artist:"+ query +"&fmt=json";
       url=encodeURI(url);
@@ -584,6 +585,8 @@ $(document).scroll(function() {
         });
 
 
+
+
           $("#top-albums").click(function(){
             $(".div-pesquisa").hide();
             //alert(response.artists[0].id);
@@ -594,12 +597,24 @@ $(document).scroll(function() {
               if (status=='success') {
             for (result of response.releases) {
               //alert(result.id);
+              var album = result.id;
               url ="http://coverartarchive.org/release/" + result.id;
               url=encodeURI(url);
               $.get(url,function(response,status){
                 if (status=='success') {
                   //alert(response.images[0].thumbnails.small);
-                  $("#search").append($("<img>").attr("src", response.images[0].thumbnails.small));
+                  $("#search").append($("<img>").attr("src", response.images[0].thumbnails.small).click(function(){
+                    url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
+                    url=encodeURI(url);
+                      $.get(url,function(response,status){
+                        if (status=='success') {
+                            $("#search").empty();
+                            for (music of response.media[0].tracks) {
+                                $("#search").append($("<p>").html(music.title));
+                            }
+                          }
+                        });
+                      }));
                 }else {
                   $("#search").append($("<img>").attr("src", "nope"));
                 }
@@ -639,7 +654,7 @@ $(document).scroll(function() {
 
 
     } else if ($("#song").val()!="") {
-      let query = $('#song').val();
+      query = $('#song').val();
 
       let url ="http://musicbrainz.org/ws/2/work/?query=work:"+ query +"&fmt=json";
       url=encodeURI(url);
@@ -679,10 +694,24 @@ $(document).scroll(function() {
 /*--------------------------------------------------------*/
 
 
-$("#biography").click(function(){
-  $(".div-pesquisa").hide();
-  $(".div-biography").show();
-});
+  $("#biography").click(function(){
+    $(".div-pesquisa").hide();
+    $(".div-biography").show();
+
+
+
+    // url="https://en.wikipedia.org/w/api.php?action=query&titles="+ query + "&prop=revisions&rvprop=content&format=json&formatversion=2";
+    // url=encodeURI(url);
+    // $.get(url,function(response,status){
+    //   if (status=='success') {
+    //     alert("here");
+    //     $(".div-biography h3").html(response.query.normalized[0].to);
+    //   }else {
+    //     alert("here1");
+    //   }
+    // });
+
+  });
 
 });
 
