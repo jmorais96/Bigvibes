@@ -72,6 +72,17 @@ section {
             margin-bottom: 5%;
     }
 
+h2::after {
+            display: block;
+            height: 5px;
+            background-color: #74C8D2;
+            content: " ";
+            width: 100px;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
 
 
 
@@ -91,17 +102,6 @@ h5 {
 
 
 
-
-        h2::after {
-            display: block;
-            height: 5px;
-            background-color: #74C8D2;
-            content: " ";
-            width: 100px;
-            border-radius: 5px;
-            margin: 0 auto;
-            margin-top: 20px;
-        }
 
         .icon-small {
         display: inline-block;
@@ -273,10 +273,62 @@ header {
 .logo-hero {
     position: absolute;
     left: -2.7%;
-    top: -55%;
-    width: 30%;
+    top: -40%;
+    width: 25%;
 }
 
+.search-bar {
+    width: 30%;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.search-bar:focus {
+    width: 30%;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #74C8D2;
+}
+
+
+.search-bar::placeholder {
+    margin-left: 5%;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+input[type=search] {
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.search-button {
+    width: 5%;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.86);
+    border: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.search-button:hover {
+    width: 5%;
+    height: 50px;
+    color: #fff;
+    border: 0;
+    background-color: #74C8D2;
+    border-bottom: 2px solid #74C8D2;
+}
 
 
 
@@ -822,12 +874,12 @@ header {
 
 #custombtn {
     position: absolute;
-    margin: 0 4%;
-    width: 30%;
-    margin-top: 3.9%;
+    left: 50.8%;
+    width: 39.2%;
+    margin-top: -9px;
     color: #fff;
     background-color: #74C8D2;
-    padding: 1%;
+    padding: 1.5%;
     border-radius: 5px;
     border: 2px solid transparent;
     cursor: pointer;
@@ -873,7 +925,7 @@ footer {
 }
 
 .social-links {
-    width: 10.85%;
+    width: 12%;
     list-style: none;
     margin: 0 auto;
 }
@@ -909,28 +961,28 @@ footer {
     font-size: 150%;
 }
 
-.ion-social-facebook,
-.ion-social-twitter,
-.ion-social-googleplus,
-.ion-social-instagram {
+.icon ion-logo-facebook,
+.icon ion-logo-twitter,
+.icon ion-logo-googleplus,
+.icon ion-logo-instagram {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
 /*HOVER EFFECT para os icones sociais*/
-.ion-social-facebook:hover {
+.icon ion-logo-facebook:hover {
     color: #3b5999;
 }
 
-.ion-social-twitter:hover {
+.icon ion-logo-twitter:hover {
     color: #55acee;
 }
 
-.ion-social-googleplus:hover {
+.icon ion-logo-googleplus:hover {
     color: #dd4b39;
 }
 
-.ion-social-instagram:hover {
+.icon ion-logo-instagram:hover {
     color: #e4405f;
 }
 
@@ -989,7 +1041,7 @@ footer p {
     display: block;
     float: left;
     width: 20%;
-    height: 270px;
+    height: 240px;
 }
 
 
@@ -1000,15 +1052,15 @@ footer p {
     width: 100%;
     height: 100%;
     border: 0;
-    color: #74C8D2;
-    background-color: #fff;
+    color: #fff;
+    background-color: #74C8D2;
     transition: all 0.5s ease-in-out;
 }
 
 
 .go-back-btn:hover {
-    background-color: #74C8D2;
-    color: #fff;
+    background-color: #fff;
+    color: #74C8D2;
 }
 
 .go-back-btn i {
@@ -1030,15 +1082,15 @@ footer p {
     width: 100%;
     height: 100%;
     border: 0;
-    color: #74C8D2;
-    background-color: #fff;
+    color: #fff;
+    background-color: #74C8D2;
     transition: all 0.5s ease-in-out;
 }
 
 
 .see-more-btn:hover {
-    background-color: #74C8D2;
-    color: #fff;
+    background-color: #fff;
+    color: #74C8D2;
 }
 
 .see-more-btn i {
@@ -1051,27 +1103,34 @@ footer p {
 /*imagem da musica do artista */
 .music-img {
     width: 100%;
-    height: 300px;
+    height: 240px;
     margin:0;
     overflow: hidden;
-    background-color: #000;
+    background-color: #666666;
+    transition: all 0.5s ease-in-out;
+}
+
+.music-img:hover {
+    width: 100%;
+    height: 240px;
+    margin:0;
+    overflow: hidden;
+    background-color: #478B8D;
 }
 
  /* ===== */
-.pesquisa li img {
-    opacity: 0.7;
-    transform: scale(1.18);
-    width: 100%;
-    height: auto;
+.pesquisa li figure i {
+    position: relative;
+    top: 55px;
+    left: 40%;
+    font-size: 400%;
+    color: #74C8D2;
     transition: all 0.5s ease-in-out;
 }
 
 
-.pesquisa li img:hover {
-    opacity: 1;
-    transform: scale(1.03);
-    width: 100%;
-    height: auto;
+.pesquisa li figure i:hover {
+    color: #fff;
 }
 
 
@@ -1083,16 +1142,20 @@ footer p {
     width: 100%;
     height: 100px;
     padding: 0;
-    top: -35%;
+    top: 20%;
     position: relative;
     z-index: 1000;
 }
 
 .info-music h6 {
+    margin: 0 10px;
     color: #fff;
     text-align: center;
-    font-size: 100%;
+    font-size: 80%;
     position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
     top: 40%;
     z-index: 1000;
 }
@@ -1100,7 +1163,7 @@ footer p {
 
 
 
-/*Container dos botoes*/
+/*----------------Container dos botoes--------------------*/
 .result-info {
     position: relative;
     list-style: none;
@@ -1117,13 +1180,13 @@ footer p {
     z-index: 1;
 }
 
-.result-info button {
+.result-info .btn-playlists {
             width: 100%;
-            height: 200px;
+            height: 240px;
             margin-top: -1%;
             color: #fff;
             border: 0;
-            background-color: #74C8D2;
+            background-color: #67AEB4;
             text-decoration: none;
             transition: all 0.5s ease-in-out;
             z-index: 1;
@@ -1132,9 +1195,64 @@ footer p {
 
 
 
-.result-info button:hover {
+.result-info .btn-playlists:hover {
             background-color: #fff;
-            color: #74C8D2;
+            color: #67AEB4;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+
+
+.result-info .btn-albums {
+            width: 100%;
+            height: 240px;
+            margin-top: -1%;
+            color: #fff;
+            border: 0;
+            background-color: #54A5AC;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+
+.result-info .btn-albums:hover {
+            background-color: #fff;
+            color: #54A5AC;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+
+
+
+.result-info .btn-bio {
+            width: 100%;
+            height: 240px;
+            margin-top: -1%;
+            color: #fff;
+            border: 0;
+            background-color: #478B8D;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+
+
+
+.result-info .btn-bio:hover {
+            background-color: #fff;
+            color: #478B8D;
             text-decoration: none;
             transition: all 0.5s ease-in-out;
             z-index: 1;
@@ -1198,7 +1316,7 @@ footer p {
     display: block;
     float: left;
     width: 20%;
-    height: 270px;
+    height: 240px;
 }
 
 
@@ -1218,7 +1336,7 @@ footer p {
     display: block;
     float: left;
     width: 20%;
-    height: 270px;
+    height: 240px;
 }
 
 
@@ -1293,7 +1411,33 @@ footer p {
     z-index: 1000;
 }
 
-/*player*/
+/*-------------------------------player-------------------------------*/
+
+.btn-player {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 70px;
+    top: -0.08%;
+    color: #fff;
+    background-color: #74C8D2;
+    border: 2px solid transparent;
+    text-decoration: none;
+    z-index: 90000;
+        }
+
+.btn-player:hover {
+    background-color: #fff;
+    color: #74c8d2;
+    border: 2px solid #74C8D2;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    z-index: 90000;
+        }
+
 .player{
+  position: relative;
+    top: -29.5%;
   width: 100%;
+  height: 100vh;    
 }
