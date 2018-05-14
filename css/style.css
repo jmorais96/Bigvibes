@@ -1120,10 +1120,6 @@ footer p {
 }
 
 .music-img:hover {
-    width: 100%;
-    height: 240px;
-    margin:0;
-    overflow: hidden;
     background-color: #478B8D;
 }
 
@@ -1151,7 +1147,7 @@ footer p {
     width: 100%;
     height: 100px;
     padding: 0;
-    top: 20%;
+    top: 18%;
     position: relative;
     z-index: 1000;
 }
