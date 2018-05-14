@@ -533,7 +533,7 @@ $(document).scroll(function() {
                     $.get(url,function(response,status){
                       if (status=='success') {
                         //$("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
-                        $("#topmusic1 figure div h6").html(response.items[0].snippet.title);
+                        $("#topmusic1 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                         $("#topmusic1 figure i").click(function(){
                           $(".div-pesquisa").hide();
                           $(".player").show();
@@ -550,7 +550,7 @@ $(document).scroll(function() {
                       $.get(url,function(response,status){
                         if (status=='success') {
                          // $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
-                          $("#topmusic2 figure div h6").html(response.items[0].snippet.title);
+                          $("#topmusic2 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                           $("#topmusic2 figure i").click(function(){
                             $(".div-pesquisa").hide();
                             $(".player").show();
@@ -567,7 +567,7 @@ $(document).scroll(function() {
                         $.get(url,function(response,status){
                           if (status=='success') {
                            // $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
-                            $("#topmusic3 figure div h6").html(response.items[0].snippet.title);
+                            $("#topmusic3 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                             $("#topmusic3 figure i").click(function(){
                               $(".div-pesquisa").hide();
                               $(".player").show();
@@ -604,7 +604,7 @@ $(document).scroll(function() {
               $.get(url,function(response,status){
                 if (status=='success') {
                   //alert(response.images[0].thumbnails.small);
-                  $("#search").append($("<img>").attr("src", response.images[0].thumbnails.small).click(function(){
+                  $(".div-album").append($("<img>").attr("src", response.images[0].thumbnails.small).click(function(){
                     url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
                     url=encodeURI(url);
                       $.get(url,function(response,status){
@@ -761,6 +761,10 @@ $(document).scroll(function() {
 
   $("#back-form").click(function(){
     $(".player").hide();
+    $(".form").show();
+  });
+  $("#back-form-artist").click(function(){
+    $(".div-pesquisa").hide();
     $(".form").show();
   });
 
