@@ -681,16 +681,19 @@ $(document).scroll(function() {
                     for (music of response.media[0].tracks) {
                       url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +music.title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
                       url=encodeURI(url);
-                      $.get(url,function(response,status){
-                        if (status=='success') {
-                          $("#more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title))))).click(function(){
-                            $("#more-music").hide();
-                            $(".player").show();
-                            $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
-                          });
-                          //$("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
-                        }
-                      });
+                      //alert(url);
+                      (function(music) {                        
+                        $.get(url,function(response,status){
+                          if (status=='success') {
+                            $(".see-more-music-1").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                              $("#more-music").hide();
+                              $(".player").show();
+                              $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
+                            });
+                            //$("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
+                          }
+                        });
+                      })(music);
                     }
                   }
                 });
