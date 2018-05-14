@@ -728,3 +728,30 @@ function backForm(){
   //alert(form)
   $('#search').html(form);
 }
+
+
+
+
+
+
+
+
+
+/* ----------------------- FORM AUTOCOMPLETE --------------------------------*/
+
+var options = {
+
+  url: "/countries.json",
+
+  getValue: "name",
+
+  list: {	
+    match: {
+      enabled: true
+    }
+  },
+
+  theme: "square"
+};
+
+$("#song").easyAutocomplete(options);
