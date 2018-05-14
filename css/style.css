@@ -1158,7 +1158,7 @@ footer p {
 
 .info-music h6 {
     margin: 0 10px;
-    color: #fff;
+    color: #000;
     text-align: center;
     font-size: 80%;
     position: relative;
@@ -1293,14 +1293,15 @@ footer p {
 
 
 /*container da pesquisa*/
-/*.container-more-music {
+.container-more-music {
     position: absolute;
     top: 135%;
+    width: 100%;
 }
 
 
 /*estilização do titulo "you searched for...*/
-/*.container-more-music h3 {
+.container-more-music h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 100%;
@@ -1311,7 +1312,7 @@ footer p {
 
 
 /*container da pesquisa 1*/
-/*.see-more-music-1 {
+.see-more-music-1 {
     list-style: none;
     display: inline-block;
     width: 100%;
@@ -1330,7 +1331,7 @@ footer p {
 
 
 /*container da pesquisa 1*/
-/*.see-more-music-2 {
+.see-more-music-2 {
     position: relative;
     list-style: none;
     display: inline-block;
@@ -1353,7 +1354,7 @@ footer p {
 
 
 /*imagem da musica do artista */
-/*.music-img {
+.music-img {
     width: 100%;
     height: 270px;
     margin:0;
@@ -1362,7 +1363,7 @@ footer p {
 }
 
  /* ===== */
-/*.see-more-music-1 li img {
+.see-more-music-1 li img {
     opacity: 0.7;
     transform: scale(1.18);
     width: 100%;
@@ -1379,7 +1380,7 @@ footer p {
 }
 
  /* ===== */
-/*.see-more-music-2 li img {
+.see-more-music-2 li img {
     opacity: 0.7;
     transform: scale(1.18);
     width: 100%;
@@ -1448,5 +1449,5 @@ footer p {
   position: relative;
     top: -29.5%;
   width: 100%;
-  height: 100vh;    
+  height: 100vh;
 }
