@@ -685,10 +685,10 @@ $(document).scroll(function() {
                       (function(music) {                        
                         $.get(url,function(response,status){
                           if (status=='success') {
-                            $(".see-more-music-1").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                            $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
                               $("#more-music").hide();
                               $(".player").show();
-                              $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
+                              $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
                             });
                             //$("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
                           }
@@ -785,25 +785,3 @@ function backForm(){
 
 
 
-
-
-
-
-/* ----------------------- FORM AUTOCOMPLETE --------------------------------*/
-
-var options = {
-
-  url: "/countries.json",
-
-  getValue: "name",
-
-  list: {	
-    match: {
-      enabled: true
-    }
-  },
-
-  theme: "square"
-};
-
-$("#song").easyAutocomplete(options);

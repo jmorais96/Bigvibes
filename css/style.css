@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
 }
@@ -22,7 +23,12 @@ body {
   font-weight: 300;
     background: #fff;
   text-rendering: optimizeLegibility;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   }
 
@@ -132,12 +138,25 @@ h5 {
             color: #74c8d2;
             border: 2px solid #74C8D2;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
         }
 
 
 
 input[type=text] {
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #74C8D2;
+}
+
+::-webkit-input-placeholder {
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #74C8D2;
+}
+
+:-ms-input-placeholder {
     font-size: 100%;
     text-transform: uppercase;
     color: #74C8D2;
@@ -151,14 +170,75 @@ input[type=text] {
 
 
 
+/*Botao para voltar ao form de pesquisa*/
+.go-back-btn {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    color: #fff;
+    background-color: #74C8D2;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.go-back-btn:hover {
+    background-color: #fff;
+    color: #74C8D2;
+}
+
+.go-back-btn i {
+    display: block;
+    font-size: 250%;
+}
+
+
+
+
+
+
+
+
+/*Botao para ver mais resultados*/
+.see-more-btn {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    color: #fff;
+    background-color: #74C8D2;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.see-more-btn:hover {
+    background-color: #fff;
+    color: #74C8D2;
+}
+
+.see-more-btn i {
+    display: block;
+    font-size: 250%;
+}
+
+
+
+
 /* Color scheme */
 
 .color {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 250px;
     position: fixed;
     right: -160px;
     top: 20%;
+    -webkit-transition: right 0.5s;
     transition: right 0.5s;
     z-index: 10000;
 }
@@ -169,11 +249,18 @@ input[type=text] {
     width: 100px;
     height: 80px;
     background-color: #74C8D2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #fff;
     font-size: 150%;
+    -webkit-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
     cursor: pointer;
     line-height: 0;
@@ -190,12 +277,16 @@ input[type=text] {
     display: none;
 }
 .palette {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 160px;
     margin: 0;
     padding: 1rem;
     background-color: #eee;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
         z-index: 10000
 }
@@ -207,10 +298,12 @@ input[type=text] {
 .palette .box {
     width: 100%;
     height: 40px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
     opacity: 0.65;
     z-index: 10000;
+    -webkit-transition: background-color 350ms;
     transition: background-color 350ms;
 }
 .palette .box:hover {
@@ -258,7 +351,7 @@ input:checked + .color > .btn-color {
 
 /* Header img */
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url(../img/hero1.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(116, 200, 210, 0.7)), to(rgba(0, 0, 0, 0))), url(../img/hero1.jpg);
     background-image: linear-gradient(rgba(116, 200, 210, 0.7), rgba(0, 0, 0, 0)), url(../img/hero1.jpg);
     background-size: cover;
     background-position: center;
@@ -292,6 +385,7 @@ header {
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid #fff;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -302,6 +396,22 @@ header {
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid #74C8D2;
+}
+
+
+.search-bar::-webkit-input-placeholder {
+    margin-left: 5%;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.search-bar:-ms-input-placeholder {
+    margin-left: 5%;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 
@@ -326,6 +436,7 @@ input[type=search] {
     border: 0;
     background-color: #fff;
     border-bottom: 2px solid #fff;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -372,6 +483,7 @@ input[type=search] {
     display: block;
     z-index: 5000;
     border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -412,6 +524,7 @@ input[type=search] {
     width: 100%;
     /* impede que os menus quebrem */
     text-align: center;
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
     z-index: 19999;
 }
@@ -419,6 +532,7 @@ input[type=search] {
 .logo {
     position: fixed;
     top: 1.1%;
+    -webkit-transform: translateY(-4%);
     transform: translateY(-4%);
     float:  left;
     width: 210px;
@@ -696,6 +810,7 @@ input[type=search] {
 
 .artists-showcase li {
     display: block;
+    -webkit-transform: skewX(-10deg);
     transform: skewX(-10deg);
     float: left;
     width: 25%;
@@ -723,7 +838,10 @@ input[type=search] {
     transform: skewX(10deg);
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s, -webkit-filter 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s, -webkit-filter 0.5s;
     transition: transform 0.5s, opacity 0.5s, filter 0.5s;
+    transition: transform 0.5s, opacity 0.5s, filter 0.5s, -webkit-transform 0.5s, -webkit-filter 0.5s;
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, filter 0.5s;
 }
@@ -1054,61 +1172,6 @@ footer p {
 }
 
 
-/*Botao para voltar ao form de pesquisa*/
-.go-back-btn {
-    display: block;
-    float: left;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    color: #fff;
-    background-color: #74C8D2;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.go-back-btn:hover {
-    background-color: #fff;
-    color: #74C8D2;
-}
-
-.go-back-btn i {
-    display: block;
-    font-size: 250%;
-}
-
-
-
-
-
-
-
-
-/*Botao para ver mais resultados*/
-.see-more-btn {
-    display: block;
-    float: left;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    color: #fff;
-    background-color: #74C8D2;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.see-more-btn:hover {
-    background-color: #fff;
-    color: #74C8D2;
-}
-
-.see-more-btn i {
-    display: block;
-    font-size: 250%;
-}
-
-
-
 /*imagem da musica do artista */
 .music-img {
     width: 100%;
@@ -1116,6 +1179,7 @@ footer p {
     margin:0;
     overflow: hidden;
     background-color: #666666;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -1130,6 +1194,7 @@ footer p {
     left: 40%;
     font-size: 400%;
     color: #74C8D2;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -1139,15 +1204,16 @@ footer p {
 }
 
 
-/* ----------------------------- IMPORTANTE ---------------------*/
+/* --------- IMPORTANTE --------*/
 /*info da musica (ANIMAR E FAZER COM QUE AO FAZER HOVER NA MUSICA APAREÇA*/
 .info-music {
     margin: 0 auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.46)));
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
     width: 100%;
     height: 100px;
     padding: 0;
-    top: 18%;
+    top: 22%;
     position: relative;
     z-index: 1000;
 }
@@ -1161,7 +1227,7 @@ footer p {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 300;
-    top: 40%;
+    top: 25%;
     z-index: 1000;
 }
 
@@ -1193,6 +1259,7 @@ footer p {
             border: 0;
             background-color: #67AEB4;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1204,6 +1271,7 @@ footer p {
             background-color: #fff;
             color: #67AEB4;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1220,6 +1288,7 @@ footer p {
             border: 0;
             background-color: #54A5AC;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1231,6 +1300,7 @@ footer p {
             background-color: #fff;
             color: #54A5AC;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1248,6 +1318,7 @@ footer p {
             border: 0;
             background-color: #478B8D;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1259,6 +1330,7 @@ footer p {
             background-color: #fff;
             color: #478B8D;
             text-decoration: none;
+            -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
@@ -1291,7 +1363,7 @@ footer p {
 /*container da pesquisa*/
 .container-more-music {
     position: absolute;
-    top: 135%;
+    top: 120.8%;
     width: 100%;
 }
 
@@ -1308,7 +1380,7 @@ footer p {
 
 
 /*container da pesquisa 1*/
-.see-more-music-1 {
+.see-more-music {
     list-style: none;
     display: inline-block;
     width: 100%;
@@ -1318,27 +1390,7 @@ footer p {
 }
 
 
-.see-more-music-1 li {
-    display: block;
-    float: left;
-    width: 20%;
-    height: 240px;
-}
-
-
-/*container da pesquisa 1*/
-.see-more-music-2 {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    margin-top: -1%;
-    top: -80%;
-}
-
-
-.see-more-music-2 li {
+.see-more-music li {
     display: block;
     float: left;
     width: 20%;
@@ -1349,75 +1401,53 @@ footer p {
 
 
 
-/*imagem da musica do artista */
+/* Container imagem da musica do artista */
 .music-img {
     width: 100%;
-    height: 270px;
+    height: 240px;
     margin:0;
     overflow: hidden;
-    background-color: #000;
-}
-
- /* ===== */
-.see-more-music-1 li img {
-    opacity: 0.7;
-    transform: scale(1.18);
-    width: 100%;
-    height: 100%;
+    background-color: #666666;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
 
-.see-more-music-1 li img:hover {
-    opacity: 1;
-    transform: scale(1.03);
+.music-img:hover {
+    background-color: #47888D;
+}
+
+
+ /* img do artista */
+.see-more-music li img {
     width: 100%;
     height: 100%;
 }
 
- /* ===== */
-.see-more-music-2 li img {
-    opacity: 0.7;
-    transform: scale(1.18);
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.see-more-music-2 li img:hover {
-    opacity: 1;
-    transform: scale(1.03);
-    width: 100%;
-    height: 100%;
-}
-
-
-/* ----------------------------- IMPORTANTE ---------------------*/
-/*info da musica (ANIMAR E FAZER COM QUE AO FAZER HOVER NA MUSICA APAREÇA*/
-/*.info-music {
-    margin: 0 auto;
-    display: none;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
-    width: 100%;
-    height: 100px;
-    padding: 0;
-    top: -35%;
+.see-more-music li figure i {
     position: relative;
-    z-index: 1000;
+    top: 55px;
+    left: 40%;
+    font-size: 400%;
+    color: #74C8D2;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-.info-music h6 {
-    display: none;
+
+.see-more-music li figure i:hover {
     color: #fff;
-    text-align: center;
-    font-size: 100%;
-    position: relative;
-    top: 40%;
-    z-index: 1000;
 }
 
-/*-------------------------------player-------------------------------*/
+
+
+
+
+
+
+
+
+/*---------------------player---------------------*/
 
 .btn-player {
     position: absolute;
@@ -1437,6 +1467,7 @@ footer p {
     color: #74c8d2;
     border: 2px solid #74C8D2;
     text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index: 90000;
         }
