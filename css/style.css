@@ -654,8 +654,9 @@ input[type=search] {
 
 .sub-menu li {
     display: block;
-    font-size: 75%;
-    text-align: center;
+    font-size: 90%;
+    text-align: left;
+    font-weight: bold;
 }
 
 .sub-menu li a {
