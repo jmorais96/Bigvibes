@@ -89,7 +89,7 @@ $(document).ready(function(){
       $(this).find(".sub-menu").css("opacity" , "0");
       $(this).find(".sub-menu").css("display", "none");
     }); */
-    
+
 
 
     /* ----------------------------------------------- */
@@ -431,7 +431,7 @@ $(document).scroll(function() {
                       url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +music.title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
                       url=encodeURI(url);
                       //alert(url);
-                      (function(music) {                        
+                      (function(music) {
                         $.get(url,function(response,status){
                           if (status=='success') {
                             $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
@@ -482,6 +482,10 @@ $(document).scroll(function() {
     }
   });
 
+
+
+  $("#")
+
   $("#back-form").click(function(){
     $(".div-pesquisa").hide();
     $(".form").show();
@@ -498,16 +502,17 @@ $(document).scroll(function() {
 
 
 
-    // url="https://en.wikipedia.org/w/api.php?action=query&titles="+ query + "&prop=revisions&rvprop=content&format=json&formatversion=2";
-    // url=encodeURI(url);
-    // $.get(url,function(response,status){
-    //   if (status=='success') {
-    //     alert("here");
-    //     $(".div-biography h3").html(response.query.normalized[0].to);
-    //   }else {
-    //     alert("here1");
-    //   }
-    // });
+    url="http://en.wikipedia.org/w/api.php?action=query&formatversion=2&titles="+ query +"&prop=pageimages&pithumbsize=1000&format=json&origin=*";
+    url=encodeURI(url);
+    $.get(url,function(response,status){
+      if (status=='success') {
+        //alert("here");
+        $(".div-biography h3").html(response.query.normalized[0].to);
+        
+      }else {
+        //alert("here1");
+      }
+    });
 
   });
 
@@ -538,8 +543,3 @@ function backForm(){
 
 
 /*    PESQUISA HEADER   */
-
-
-
-
-
