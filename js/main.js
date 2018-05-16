@@ -122,7 +122,7 @@ $(document).ready(function(){
 
 
 
-    
+
 
 
 
@@ -323,6 +323,7 @@ $(document).scroll(function() {
 
           $("#top-albums").click(function(){
             $(".div-pesquisa").hide();
+            $("#more-music").show();
             //alert(response.artists[0].id);
             url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
             url=encodeURI(url);
@@ -332,24 +333,29 @@ $(document).scroll(function() {
             for (result of response.releases) {
               //alert(result.id);
               var album = result.id;
+              let titulo = result.title;
               url ="http://coverartarchive.org/release/" + result.id;
               url=encodeURI(url);
               $.get(url,function(response,status){
                 if (status=='success') {
                   //alert(response.images[0].thumbnails.small);
-                  $(".div-album").append($("<img>").attr("src", response.images[0].thumbnails.small).click(function(){
+                  $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<img>").attr("src", response.images[0].thumbnails.small)).append($("<div>").addClass("info-music").append($("<h6>").html(titulo).css("color","#FFF")))).click(function(){
+                    $(".see-more-music").empty();
                     url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
                     url=encodeURI(url);
                       $.get(url,function(response,status){
                         if (status=='success') {
-                            $("#search").empty();
                             for (music of response.media[0].tracks) {
-                              url ="https://www.googleapis.com/youtube/v3/search?q="+ query + " " +music.title+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
-                              url=encodeURI(url);
-                              $.get(url,function(response,status){
-                                if (status=='success') {
-                                  $("#search").append($("<iframe>").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId));
-                                }
+                              $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                                $("#more-music").hide();
+                                $(".player").show();
+                                let url ="https://www.googleapis.com/youtube/v3/search?q="+query+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+                                 url=encodeURI(url);
+                                 $.get(url,function(response,status){
+                                   if (status=='success') {
+                                $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
+                              }
+                            });
                               });
                             }
                           }
@@ -492,7 +498,7 @@ $(document).scroll(function() {
       if (status=='success') {
         //alert("here");
         $(".div-biography h3").html(response.query.normalized[0].to);
-        
+
       }else {
         //alert("here1");
       }
