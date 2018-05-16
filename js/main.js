@@ -122,23 +122,7 @@ $(document).ready(function(){
 
 
 
-    /*send music*/
-
-const realFileBtn = document.getElementById("realfile");
-const customBtn = document.getElementById("custombtn");
-const customTxt = document.getElementById("customtext");
-
-    customBtn.addEventListener("click", function(){
-        realFileBtn.click();
-    })
-
-    realFileBtn.addEventListener("change", function(){
-        if (realFileBtn.value) {
-            customTxt.innerHTML = realFileBtn.value;
-        } else {
-            customTxt.innerHTML = "No files chosen, yet!";
-        }
-    });
+    
 
 
 
