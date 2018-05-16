@@ -1106,8 +1106,9 @@ input[type=search] {
 
 
 footer {
-   background-color: #333;
-    padding:30px;
+   background-image: linear-gradient(#f8f8f8, rgba(248, 248, 248, 0.7)), url(../img/footer.png);
+    height: 200px;
+    background-size: cover;
     font-size: 80%;
 }
 
@@ -1119,7 +1120,7 @@ footer {
 .social-links {
     width: 12%;
     list-style: none;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
 }
 
 .social-links li {
@@ -1142,7 +1143,7 @@ footer {
 }
 
 .copyright {
-    color: #74C8D2;
+    color: #000;
 }
 
 
@@ -1153,28 +1154,28 @@ footer {
     font-size: 150%;
 }
 
-.icon ion-logo-facebook,
-.icon ion-logo-twitter,
-.icon ion-logo-googleplus,
-.icon ion-logo-instagram {
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
 /*HOVER EFFECT para os icones sociais*/
-.icon ion-logo-facebook:hover {
+.ion-logo-facebook:hover {
     color: #3b5999;
 }
 
-.icon ion-logo-twitter:hover {
+.ion-logo-twitter:hover {
     color: #55acee;
 }
 
-.icon ion-logo-googleplus:hover {
+.ion-logo-googleplus:hover {
     color: #dd4b39;
 }
 
-.icon ion-logo-instagram:hover {
+.ion-logo-instagram:hover {
     color: #e4405f;
 }
 
