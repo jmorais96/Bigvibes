@@ -53,12 +53,6 @@
 
             <li><a href="#contacts">CONTACTS</a></li>
 
-           <!-- <li><a  href="">SETTINGS</a><ul class="sub-menu">
-
-                <li><a  href="#">LOGIN</a></li>
-                <li><a  href="/login/index.html">REGISTER</a></li>
-                </ul>
-                </li> -->
           </ul>
             </nav>
             <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
@@ -201,18 +195,18 @@
          </div>
 
         <div class="form">
-         <div class="row steps-container">
+         <div class="row">
+            <div class="btns-play-add"> 
            <div class="col span-1-of-2 steps">
-             <div>1</div>
-             <p>SEARCH WITH ONE OF THE FOLLOWING OPTIONS</p>
+             <button class="favs">YOUR FAVOURITES</button>
            </div>
 
 
            <div class="col span-1-of-2 steps">
-             <div>2</div>
-             <p>THEN THE PAGE WILL SWIPE LEFT AND A BUNCH OF VIBES WILL APPEAR</p>
-           </div>
+             <button class="plays">YOUR PLAYLISTS</button>
          </div>
+            </div> 
+            </div>
 
 
 
@@ -327,9 +321,27 @@
                      <div class="row">
                          <h3>You searched for...</h3>
                          </div>
+             <div class="row">
+            <div class="filter-container">    
+             <input class="search-filter" name="search-bar" type="search" id="header-song" placeholder="Search here!">
+                <button class="btn-filter" name="search-bar" type="submit" id="submit"><i class="ion-ios-search"></i></button>
+                </div> 
+             </div>
 
 
                      <ul class="see-more-music Clearfix">
+                         <!--- BOTOES DE ADD PLAYLIST E FAVORITOS--->
+                         <div class="option-btn1">    
+                         <div class="btn-add-fav"><i class="ion-ios-add"></i></div>
+                        </div>     
+                             
+                         <div class="option-btn2">
+                         <ul class="btn-play"><i class="ion-ios-more"></i>
+                         <li><a href="#">CREATE PLAYLIST</a></li>
+                         <li><a href="#">ADD TO X PLAYLIST</a></li>
+                             
+                         </ul>
+                        </div>
 
                         <li><button class="go-back-btn" type="button" name="button" id="your-playlist"><i class="ion-ios-arrow-back"></i>GO BACK</button></li>
 
