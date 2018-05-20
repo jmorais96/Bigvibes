@@ -319,8 +319,10 @@ $(document).scroll(function() {
         });
 
           $(".see-more-btn").click(function(){
+            let singles=[];
             $(".div-pesquisa").hide();
             $("#more-music").show();
+            $("#more-music .row h3").html("You searched for " + response.artists[0].name);
             url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
             url=encodeURI(url);
             //alert(url);
@@ -330,12 +332,23 @@ $(document).scroll(function() {
                   //alert(result.id);
                   var album = result.id;
                   let titulo = result.title;
-                  $(".see-more-music").empty();
                   url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
                   url=encodeURI(url);
                   $.get(url,function(response,status){
                     if (status=='success') {
+                      let aux=0;
                       for (music of response.media[0].tracks) {
+                        for (var i = 0; i < singles.length; i++) {
+                          if (singles[i]==music.title) {
+                            aux=1;
+                            break;
+                          }
+                        }
+                        if (aux==1) {
+                          break;
+                        }else{
+                          singles[i+1]=music.title;
+                        }
                       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
                         $("#more-music").hide();
                         $(".player").show();
@@ -546,8 +559,8 @@ $(document).scroll(function() {
     $(".form").show();
   });
   $("#back-form-artist").click(function(){
-    $(".div-pesquisa").hide();
-    $(".form").show();
+    $("#more-music").hide();
+    $(".div-pesquisa").show();
   });
 
 });
