@@ -6,6 +6,8 @@ $("#more-music").hide();
 var color="";
 var form ="";
 var query="";
+var favoritos=[];
+var index=0;
 const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 $(document).ready(function(){
 
@@ -267,7 +269,10 @@ $(document).scroll(function() {
                       if (status=='success') {
                         //$("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                         $("#topmusic1 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                        $("#topmusic1 figure i").click(function(){
+                        $("#topmusic1 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                          addFav(response.items[0].snippet.title);
+                        }))))
+                        $("#topmusic1 figure .ion-ios-play-circle").click(function(){
                           $(".div-pesquisa").hide();
                           $(".player").show();
                           $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
@@ -284,7 +289,10 @@ $(document).scroll(function() {
                         if (status=='success') {
                          // $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                           $("#topmusic2 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                          $("#topmusic2 figure i").click(function(){
+                          $("#topmusic2 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                            addFav(response.items[0].snippet.title);
+                          }))))
+                          $("#topmusic2 figure .ion-ios-play-circle").click(function(){
                             $(".div-pesquisa").hide();
                             $(".player").show();
                             $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
@@ -301,7 +309,10 @@ $(document).scroll(function() {
                           if (status=='success') {
                            // $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                             $("#topmusic3 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                            $("#topmusic3 figure i").click(function(){
+                            $("#topmusic3 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                              addFav(response.items[0].snippet.title);
+                            }))))
+                            $("#topmusic3 figure .ion-ios-play-circle").click(function(){
                               $(".div-pesquisa").hide();
                               $(".player").show();
                               $(".player iframe").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%");
@@ -397,18 +408,12 @@ $(document).scroll(function() {
                     url=encodeURI(url);
                       $.get(url,function(response,status){
                         if (status=='success') {
-                            for (music of response.media[0].tracks) {
-                              $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
-                                $("#more-music").hide();
-                                $(".player").show();
-                                let url ="https://www.googleapis.com/youtube/v3/search?q="+music.title+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
-                                 url=encodeURI(url);
-                                 $.get(url,function(response,status){
-                                   if (status=='success') {
-                                $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
-                              }
-                            });
-                              });
+                          for (let track = 0; track < response.media[0].tracks.length; track++) {
+                              $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
+                                showMusic(response.media[0].tracks[track].title);
+                              })).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                                addFav(response.media[0].tracks[track].title);
+                              })))).append($("<div>").addClass("info-music").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))))
                             }
                           }
                         });
@@ -571,12 +576,29 @@ $(document).scroll(function() {
     $(".form").show();
   });
   $("#back-form-artist").click(function(){
-    $("#more-music").hide();
-    $(".div-pesquisa").show();
+    $(".div-pesquisa").hide();
+    $(".form").show();
   });
 
 
 });
+function showMusic(musica){
+  $("#more-music").hide();
+  $(".player").show();
+  let url ="https://www.googleapis.com/youtube/v3/search?q="+musica+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+   url=encodeURI(url);
+   $.get(url,function(response,status){
+     if (status=='success') {
+       $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
+      }
+  });
+}
+
+function addFav(musica){
+  favoritos[index]=musica;
+  index++;
+}
+
 function backArtist(){
   $("#more-music").hide();
   $(".div-pesquisa").show();
