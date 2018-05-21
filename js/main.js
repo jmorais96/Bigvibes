@@ -72,7 +72,7 @@ $(document).ready(function(){
       $(this).css("color", "#74C8D2");
   });
 
-/* ------------------------------------------------------------ */
+/* ---------------------------------   --------------------------- */
 
 
 
@@ -323,6 +323,8 @@ $(document).scroll(function() {
             $(".div-pesquisa").hide();
             $("#more-music").show();
             $("#more-music .row h3").html("You searched for " + response.artists[0].name);
+            $(".see-more-music").empty();
+            $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="backArtist()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
             url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
             url=encodeURI(url);
             //alert(url);
@@ -349,7 +351,7 @@ $(document).scroll(function() {
                         }else{
                           singles[i+1]=music.title;
                         }
-                      $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                      $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
                         $("#more-music").hide();
                         $(".player").show();
                         let url ="https://www.googleapis.com/youtube/v3/search?q="+music.title+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
@@ -359,7 +361,7 @@ $(document).scroll(function() {
                             $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
                           }
                         });
-                      });
+                      })));
                     }
                   }
                 });
@@ -372,6 +374,8 @@ $(document).scroll(function() {
           $("#top-albums").click(function(){
             $(".div-pesquisa").hide();
             $("#more-music").show();
+            $(".see-more-music").empty();
+            $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="backArtist()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
             //alert(response.artists[0].id);
             url="http://musicbrainz.org/ws/2/artist/"+ response.artists[0].id +"?inc=releases&fmt=json";
             url=encodeURI(url);
@@ -459,6 +463,8 @@ $(document).scroll(function() {
 
             $(".form").hide();
             $("#more-music").show();
+            $(".see-more-music").empty();
+            $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
             var album = response.releases[0].id;
             url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
             url=encodeURI(url);
@@ -498,18 +504,14 @@ $(document).scroll(function() {
       $.get(url,function(response,status){
         if (status=='success' && (typeof response.works[0] !== 'undefined')) {
           //alert(response.works)
-          let url ="https://www.googleapis.com/youtube/v3/search?q="+query+" "+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+          let url ="https://www.googleapis.com/youtube/v3/search?q="+query.title+" "+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
           url=encodeURI(url);
 
           $.get(url,function(response,status){
             if (status=='success') {
-              form = $('#search').html();
-              //alert(form);
-              $('#search').empty();
-              $('#search').append($("<button></button>").html("GO BACK TO THE SEARCH").css("height", "70px").css("width", "100%").css("background-color", "#74C8D2").css("color", "#fff").css("border", "2px solid transparent").attr("onclick", "backForm()"));
-              //$('#search').append($("<div>").html("<p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p><p>ola</p>"));
-              $("#search").append($("<iframe>").attr('src', "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100%"));
-
+              $(".form").hide();
+              $(".player").show();
+              $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
             }
           });
 
@@ -518,8 +520,18 @@ $(document).scroll(function() {
         }
       });
     }
+
+
+
+
+
   });
 
+  $(".artist-photo").click(function(){
+    let artist = $(this).find("h4").html();
+    $("#artist").val(artist);
+    $("#submeter").click();
+  });
 
 
   //$("#")
@@ -563,14 +575,18 @@ $(document).scroll(function() {
     $(".div-pesquisa").show();
   });
 
+
 });
+function backArtist(){
+  $("#more-music").hide();
+  $(".div-pesquisa").show();
+}
 
 /* voltar ao form*/
-function backForm(){
-  //alert (form);
-  $('#search').empty();
-  //alert(form)
-  $('#search').html(form);
+function back(){
+  $("#more-music").hide();
+  $(".player").hide();
+  $('#search').show();
 }
 
 
