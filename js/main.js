@@ -404,6 +404,7 @@ $(document).scroll(function() {
                   //alert(response.images[0].thumbnails.small);
                   $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<img>").attr("src", response.images[0].thumbnails.small)).append($("<div>").addClass("info-music").append($("<h6>").html(titulo).css("color","#FFF")))).click(function(){
                     $(".see-more-music").empty();
+                    $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="backArtist()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
                     url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
                     url=encodeURI(url);
                       $.get(url,function(response,status){
@@ -571,6 +572,29 @@ $(document).scroll(function() {
 
   });
 
+
+  $(".favs").click(function(){
+    $(".form").hide();
+    $("#more-music").show();
+    $(".see-more-music").empty();
+    $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
+    for (music of favoritos) {
+      $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
+        showMusic(music);
+        }))).append($("<div>").addClass("info-music").append($("<h6>").html(music).css("color","#FFF"))))
+    }
+  });
+
+  $(".plays").click(function(){
+    $(".form").hide();
+    $("#more-music").show();
+    $(".see-more-music").empty();
+    $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
+    $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
+      playPlaylist(favoritos);
+    }))).append($("<div>").addClass("info-music").append($("<h6>").html("favoritos").css("color","#FFF"))))
+  })
+
   $("#back-form").click(function(){
     $(".player").hide();
     $(".form").show();
@@ -593,6 +617,44 @@ function showMusic(musica){
       }
   });
 }
+
+  function playPlaylist(playlist){
+    $("#more-music").hide();
+    $(".player").show();
+    var fullPlaylist="";
+    let j = 0;
+    for (musica of playlist) {
+        let id = musicaPlaylist(musica);
+        id=id.responseJSON.items[0].id.videoId;
+        alert(id);
+        console.log(id);
+      if (j==0) {
+        fullPlaylist= id + "?playlist=";
+      }else if(j==1){
+        fullPlaylist=fullPlaylist   + id + "," ;
+      }else{
+        fullPlaylist=fullPlaylist   +id  ;
+      }
+      j++;
+    }
+
+
+    $(".player iframe").attr("src", "https://www.youtube.com/embed/"+fullPlaylist).css("border", "0").css("width", "100%").css("height", "100vh");
+  }
+
+ function musicaPlaylist(musica){
+   let url ="https://www.googleapis.com/youtube/v3/search?q="+musica+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+   url=encodeURI(url);
+   var result;
+    $.ajaxSetup({async: false});
+      var result =$.get(url,function(response,status){
+       if (status=='success') {
+         result = response.items[0].id.videoId;
+         return result;
+       }
+     });
+     return result;
+ }
 
 function addFav(musica){
   favoritos[index]=musica;
