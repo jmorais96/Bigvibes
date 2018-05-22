@@ -1596,28 +1596,26 @@ footer p {
     position: absolute;
     display: inline;
     top: 50px;
+    z-index: 10000;
 }
 
-.option-btn2 {
-    position: absolute;
-    display: inline;
-    top: 50px;
-}
 
-.option-btn1 i {
+.option-btn1 .btn-add-fav i {
     position: relative;
     left: 300px;
-    top: 55px;
+    top: 5px;
     font-size: 200%;
     color: rgba(255, 255, 255, 0.22);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    z-index: 10000;
 }
 
 
 
-.option-btn1 i:hover {
+.option-btn1 .btn-add-fav i:hover {
     color: #74C8D2;
+    z-index: 10000;
 }
 
 
