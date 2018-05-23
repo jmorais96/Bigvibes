@@ -302,6 +302,7 @@ $(document).scroll(function() {
                           $("#topmusic2 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
 
                           }))))
+
                           $("#topmusic2 figure .ion-ios-play-circle").click(function(){
                             $(".div-pesquisa").hide();
                             $(".player").show();
@@ -378,6 +379,12 @@ $(document).scroll(function() {
 
                       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                         addFav(response.items[0].snippet.title);
+                      })))).append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("PLAYLIST 1")).click(function(){
+
+                      })).append($("<li>").append($("<a>").html("LAYLIST 2")).click(function(){
+
+                      })).append($("<li>").append($("<a>").html("PLAYLIST 3")).click(function(){
+
                       })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
                         $("#more-music").hide();
                         $(".player").show();
@@ -428,7 +435,13 @@ $(document).scroll(function() {
                           for (let track = 0; track < response.media[0].tracks.length; track++) {
                               $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
                                 showMusic(response.media[0].tracks[track].title);
-                              })).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                              })).append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
+
+                              })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 2")).click(function(){
+
+                              })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 3")).click(function(){
+
+                              })))).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                                 addFav(response.media[0].tracks[track].title);
                               })))).append($("<div>").addClass("info-music").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))))
                             }
@@ -612,7 +625,7 @@ $(document).scroll(function() {
     $("#more-music").show();
     $(".see-more-music").empty();
     $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
-    $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
+    $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-musical-notes").click(function(){
       playPlaylist(favoritos);
     }))).append($("<div>").addClass("info-music").append($("<h6>").html("favoritos").css("color","#FFF"))))
   })
