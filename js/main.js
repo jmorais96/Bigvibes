@@ -375,7 +375,10 @@ $(document).scroll(function() {
                         }else{
                           singles[i+1]=music.title;
                         }
-                      $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
+
+                      $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
+                        addFav(response.items[0].snippet.title);
+                      })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
                         $("#more-music").hide();
                         $(".player").show();
                         let url ="https://www.googleapis.com/youtube/v3/search?q="+music.title+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
