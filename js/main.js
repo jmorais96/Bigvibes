@@ -566,12 +566,6 @@ $(document).scroll(function() {
     $(".div-biography").show();
 
 
-    url="http://en.wikipedia.org/w/api.php?action=query&formatversion=2&titles="+ query +"&prop=pageimages&pithumbsize=1000&format=json&origin=*";
-    url=encodeURI(url);
-    $.get(url,function(response,status){
-      if (status=='success') {
-        //alert("here");
-       let img="<img src='"+response.query.pages[0].thumbnail.source+"'>";
 
         url="https://en.wikipedia.org/w/api.php?action=parse&page="+ query +"&format=json&origin=*";
         url=encodeURI(url);
@@ -581,7 +575,7 @@ $(document).scroll(function() {
             $(".div-biography p").html(response.parse.text['*']);
           }
         });
-      }
+      
 
   });
 
