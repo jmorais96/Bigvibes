@@ -1591,6 +1591,109 @@ footer p {
 
 
 /* BOTOES DE ADICIONAR A PLAYLIST E AOS FAVORITOS */
+/* --- BOTOES PARA O TOP DO ARTISTA */
+.option-btn1_top {
+    position: absolute;
+    display: inline;
+    top: 50px;
+    z-index: 10000;
+}
+
+
+.option-btn1_top .btn-add-fav_top i {
+    position: relative;
+    left: 300px;
+    top: 5px;
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0.22);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 10000;
+}
+
+
+
+.option-btn1_top .btn-add-fav_top i:hover {
+    color: #74C8D2;
+    z-index: 10000;
+}
+
+
+.option-btn2_top i {
+    position: relative;
+    left: 315px;
+    top: 55px;
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0.22);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.option-btn2_top i:hover {
+    color: #74C8D2;
+}
+
+.option-btn2_top li {
+    opacity: 1;
+    position: relative;
+    left: 500px;
+    top: -30px;
+    margin: 0;
+    display: block;
+    background-color: #fff;
+    padding: 11px;
+    width: 50%;
+    height: 100%;
+    z-index: 5000;
+    transition: 0.5s all ease-in-out;
+}
+
+
+.option-btn2_top li:hover {
+    position: relative;
+    left: 500px;
+    top: -30px;
+    margin: 0;
+    display: block;
+    background-color: #74C8D2;
+    color: #fff;
+    padding: 11px;
+    content: '';
+    width: 50%;
+    height: 100%;
+    z-index: 5000;
+}
+
+
+
+.option-btn2_top li a {
+    font-size: 70%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.option-btn2_top li a:hover {
+    font-size: 70%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- BOTOES PARA O SEE MORE --- */
 
 .option-btn1 {
     position: absolute;
