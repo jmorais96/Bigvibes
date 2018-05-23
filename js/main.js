@@ -543,11 +543,16 @@ $(document).scroll(function() {
       });
     }
 
+    $(".search-filter").keyup(function() {
+      //alert('here');
+      let filter = $(this).val().toLowerCase();
+      $(".see-more-music li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(filter) > -1)
+      });
+    });
 
 
 
-
-  });
 
   $(".artist-photo").click(function(){
     let artist = $(this).find("h4").html();
@@ -589,6 +594,7 @@ $(document).scroll(function() {
   });
 
 
+
   $(".favs").click(function(){
     $(".form").hide();
     $("#more-music").show();
@@ -621,6 +627,7 @@ $(document).scroll(function() {
   });
 
 
+});
 });
 function showMusic(musica){
   $("#more-music").hide();
