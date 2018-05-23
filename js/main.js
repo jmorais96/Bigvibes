@@ -271,14 +271,7 @@ $(document).scroll(function() {
                         $("#topmusic1 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                         $("#topmusic1 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                           addFav(response.items[0].snippet.title);
-                        }))))
-                        $("#topmusic1 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
-
-                        })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 2")).click(function(){
-
-                        })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 3")).click(function(){
-
-                        }))))
+                        }))));
                         $("#topmusic1 figure .ion-ios-play-circle").click(function(){
                           $(".div-pesquisa").hide();
                           $(".player").show();
@@ -298,10 +291,7 @@ $(document).scroll(function() {
                           $("#topmusic2 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                           $("#topmusic2 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                             addFav(response.items[0].snippet.title);
-                          }))))
-                          $("#topmusic2 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
-
-                          }))))
+                          }))));
 
                           $("#topmusic2 figure .ion-ios-play-circle").click(function(){
                             $(".div-pesquisa").hide();
@@ -322,10 +312,7 @@ $(document).scroll(function() {
                             $("#topmusic3 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
                             $("#topmusic3 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                               addFav(response.items[0].snippet.title);
-                            }))))
-                            $("#topmusic3 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
-
-                            }))))
+                            }))));
                             $("#topmusic3 figure .ion-ios-play-circle").click(function(){
                               $(".div-pesquisa").hide();
                               $(".player").show();
@@ -379,12 +366,6 @@ $(document).scroll(function() {
 
                       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                         addFav(response.items[0].snippet.title);
-                      })))).append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("PLAYLIST 1")).click(function(){
-
-                      })).append($("<li>").append($("<a>").html("LAYLIST 2")).click(function(){
-
-                      })).append($("<li>").append($("<a>").html("PLAYLIST 3")).click(function(){
-
                       })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
                         $("#more-music").hide();
                         $(".player").show();
@@ -435,13 +416,7 @@ $(document).scroll(function() {
                           for (let track = 0; track < response.media[0].tracks.length; track++) {
                               $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
                                 showMusic(response.media[0].tracks[track].title);
-                              })).append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
-
-                              })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 2")).click(function(){
-
-                              })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 3")).click(function(){
-
-                              })))).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                              })).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                                 addFav(response.media[0].tracks[track].title);
                               })))).append($("<div>").addClass("info-music").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))))
                             }
