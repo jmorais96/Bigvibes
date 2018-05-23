@@ -991,9 +991,9 @@ input[type=search] {
 
 .info-container {
     display: none;
-    background: #fff;
+    background: linear-gradient(to right, #74C8D2, rgba(116, 200, 210, 0));
     width: 200px;
-    height: 100px;
+    height: 40px;
     padding: 0;
     z-index: 1000;
     color: #000;
@@ -1009,30 +1009,19 @@ input[type=search] {
 .info-container.adjust>h4 {
     top: 25%;
     left: 20%;
-}
-
-.info-container.adjust>p {
-    left: 20%;
-    top: 55%;
+    text-transform: uppercase;
+    
 }
 
 
 
 .info-container>h4 {
-    color: black;
+    color: #fff;
     float: left;
     position: absolute;
     top: 25%;
     left: 10%;
-    z-index: 1000;
-}
-
-.info-container>p {
-    color: black;
-    float: left;
-    position: absolute;
-    top: 55%;
-    left: 10%;
+    text-transform: uppercase;
     z-index: 1000;
 }
 
@@ -1602,7 +1591,7 @@ footer p {
 
 .option-btn1_top .btn-add-fav_top i {
     position: relative;
-    left: 300px;
+    left: 30px;
     top: 5px;
     font-size: 200%;
     color: rgba(255, 255, 255, 0.22);
@@ -1636,7 +1625,6 @@ footer p {
 }
 
 .option-btn2_top li {
-    opacity: 1;
     position: relative;
     left: 500px;
     top: -30px;
@@ -1705,7 +1693,7 @@ footer p {
 
 .option-btn1 .btn-add-fav i {
     position: relative;
-    left: 300px;
+    left: 40px;
     top: 5px;
     font-size: 200%;
     color: rgba(255, 255, 255, 0.22);

@@ -269,10 +269,10 @@ $(document).scroll(function() {
                       if (status=='success') {
                         //$("#topmusic1 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                         $("#topmusic1 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                        $("#topmusic1 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                        $("#topmusic1 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                           addFav(response.items[0].snippet.title);
                         }))))
-                        $("#topmusic1 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
+                        $("#topmusic1 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
 
                         })).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 2")).click(function(){
 
@@ -296,10 +296,10 @@ $(document).scroll(function() {
                         if (status=='success') {
                          // $("#topmusic2 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                           $("#topmusic2 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                          $("#topmusic2 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                          $("#topmusic2 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                             addFav(response.items[0].snippet.title);
                           }))))
-                          $("#topmusic2 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
+                          $("#topmusic2 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
 
                           }))))
                           $("#topmusic2 figure .ion-ios-play-circle").click(function(){
@@ -319,10 +319,10 @@ $(document).scroll(function() {
                           if (status=='success') {
                            // $("#topmusic3 figure img").attr("src", response.items[0].snippet.thumbnails.high.url).css("height", "240px").css("width", "100%");
                             $("#topmusic3 figure div h6").html(response.items[0].snippet.title).css("color", "#FFF");
-                            $("#topmusic3 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                            $("#topmusic3 figure").append($("<div>").addClass("option-btn1_top").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                               addFav(response.items[0].snippet.title);
                             }))))
-                            $("#topmusic3 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
+                            $("#topmusic3 figure").append($("<div>").addClass("option-btn2-top").append($("<ul>").addClass("btn-play_top").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
 
                             }))))
                             $("#topmusic3 figure .ion-ios-play-circle").click(function(){
