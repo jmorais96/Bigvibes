@@ -652,11 +652,11 @@ function showMusic(musica){
         alert(id);
         console.log(id);
       if (j==0) {
-        fullPlaylist= id + "?playlist=";
+        fullPlaylist= id ;
       }else if(j==1){
-        fullPlaylist=fullPlaylist   + id + "," ;
+        fullPlaylist=fullPlaylist + "?playlist="  + id ;
       }else{
-        fullPlaylist=fullPlaylist   +id  ;
+        fullPlaylist=fullPlaylist  + ","  +id  ;
       }
       j++;
     }
