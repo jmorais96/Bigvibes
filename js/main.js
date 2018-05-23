@@ -272,6 +272,9 @@ $(document).scroll(function() {
                         $("#topmusic1 figure").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                           addFav(response.items[0].snippet.title);
                         }))))
+                        $("#topmusic1 figure").append($("<div>").addClass("option-btn2").append($("<ul>").addClass("btn-play").append($("<i>").addClass("ion-ios-more")).append($("<li>").append($("<a>").html("ADD TO PLAYLIST 1")).click(function(){
+
+                        }))))
                         $("#topmusic1 figure .ion-ios-play-circle").click(function(){
                           $(".div-pesquisa").hide();
                           $(".player").show();
