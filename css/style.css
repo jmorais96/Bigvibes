@@ -396,7 +396,7 @@ input:checked + .color > .btn-color {
 .option-btn1 {
     position: relative;
     display: inline;
-    top: -139px;
+    top: -140px;
     z-index: 10000;
 }
 
@@ -1755,7 +1755,7 @@ footer p {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 300;
-    top: 35px;
+    top: 25px;
     z-index: 1000;
 }
 
