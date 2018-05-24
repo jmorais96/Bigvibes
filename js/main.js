@@ -1,4 +1,4 @@
-$("#navbar-sticky").hide();
+  $("#navbar-sticky").hide();
 $(".div-pesquisa").hide();
 $(".div-biography").hide();
 $(".player").hide();
@@ -10,6 +10,11 @@ var favoritos=[];
 var index=0;
 const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 $(document).ready(function(){
+  $(".search-button").click(function(){
+      let artista = $("#header-song").val();
+      $("#artist").val(artista);
+      $("#submeter").click();
+  });
 
   // let data = new Date();
   // let hour = currentdate.getHours();
@@ -540,7 +545,6 @@ $(document).scroll(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(filter) > -1)
       });
     });
-
 
 
 
