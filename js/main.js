@@ -592,6 +592,9 @@ $(document).scroll(function() {
     $("#more-music").show();
     $(".see-more-music").empty();
     $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
+    $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-musical-notes").click(function(){
+      playPlaylist(favoritos);
+    }))).append($("<div>").addClass("info-music").append($("<h6>").html("favoritos").css("color","#FFF"))))
     for (music of favoritos) {
       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").css("top", "50px").click(function(){
         showMusic(music);
