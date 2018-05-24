@@ -684,8 +684,8 @@ function backArtist(){
 /* voltar ao form*/
 function back(){
   $("#more-music").hide();
-  $(".player").hide();
-  $('#search').show();
+  $(".player").hide
+  $('.form').show();
 }
 
 
