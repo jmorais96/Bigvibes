@@ -1010,7 +1010,7 @@ input[type=search] {
     top: 25%;
     left: 20%;
     text-transform: uppercase;
-    
+
 }
 
 
@@ -1684,7 +1684,7 @@ footer p {
 /* --- BOTOES PARA O SEE MORE --- */
 
 .option-btn1 {
-    position: absolute;
+    
     display: inline;
     top: 50px;
     z-index: 10000;

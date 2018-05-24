@@ -624,7 +624,7 @@ $(document).scroll(function() {
 function showMusic(musica){
   $("#more-music").hide();
   $(".player").show();
-  let url ="https://www.googleapis.com/youtube/v3/search?q="+musica+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
+  let url ="https://www.googleapis.com/youtube/v3/search?q="+musica+"&maxResults=1&part=snippet&key="+youtubeAPIKey;
    url=encodeURI(url);
    $.get(url,function(response,status){
      if (status=='success') {
@@ -641,8 +641,8 @@ function showMusic(musica){
     for (musica of playlist) {
         let id = musicaPlaylist(musica);
         id=id.responseJSON.items[0].id.videoId;
-        alert(id);
-        console.log(id);
+        //alert(id);
+        //console.log(id);
       if (j==0) {
         fullPlaylist= id ;
       }else if(j==1){
