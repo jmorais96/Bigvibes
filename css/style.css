@@ -1810,3 +1810,57 @@ input[name=search-bar] {
   width: 100%;
   height: 100vh;
 }
+
+
+
+
+
+
+/* ---- BIOGRAFIA ---- */
+
+.div-biography .row h3 {
+    margin-top: 7.3%;
+    margin-left: 25%;
+    font-size: 150%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #74C8D2;
+}
+
+
+.div-biography p {
+    margin-top: 5%;
+    margin-left: 5%;
+    padding-left: 5%;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 90%;
+    color: #000;
+}
+
+
+
+
+
+.go-back-btn-bio {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 150px;
+    border: 0;
+    color: #fff;
+    background-color: #74C8D2;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.go-back-btn-bio:hover {
+    background-color: #fff;
+    color: #74C8D2;
+}
+
+.go-back-btn-bio i {
+    display: block;
+    font-size: 250%;
+}
