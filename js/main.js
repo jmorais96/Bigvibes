@@ -366,7 +366,7 @@ $(document).scroll(function() {
 
                       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                         addFav(response.items[0].snippet.title);
-                      })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))).click(function(){
+                      })))).append($("<i>").addClass("ion-ios-play-circle").click(function(){
                         $("#more-music").hide();
                         $(".player").show();
                         let url ="https://www.googleapis.com/youtube/v3/search?q="+music.title+"song&maxResults=1&part=snippet&key="+youtubeAPIKey;
@@ -376,7 +376,7 @@ $(document).scroll(function() {
                             $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
                           }
                         });
-                      })));
+                      })).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF")))));
                     }
                   }
                 });
@@ -414,11 +414,11 @@ $(document).scroll(function() {
                       $.get(url,function(response,status){
                         if (status=='success') {
                           for (let track = 0; track < response.media[0].tracks.length; track++) {
-                              $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
-                                showMusic(response.media[0].tracks[track].title);
-                              })).append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                              $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav_top").append($("<i>").addClass("ion-ios-add").click(function(){
                                 addFav(response.media[0].tracks[track].title);
-                              })))).append($("<div>").addClass("info-music").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))))
+                              })))).append($("<i>").addClass("ion-ios-play-circle").click(function(){
+                                showMusic(response.media[0].tracks[track].title);
+                              })).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF")))));
                             }
                           }
                         });
@@ -488,7 +488,9 @@ $(document).scroll(function() {
                       (function(music) {
                         $.get(url,function(response,status){
                           if (status=='success') {
-                            $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                            $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
+                              addFav(response.media[0].tracks[track].title);
+                            })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
                               $("#more-music").hide();
                               $(".player").show();
                               $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
@@ -575,7 +577,7 @@ $(document).scroll(function() {
             $(".div-biography p").html(response.parse.text['*']);
           }
         });
-      
+
 
   });
 
