@@ -1696,31 +1696,15 @@ footer p {
 
 .info-music_album h6 {
     margin: 0 10px;
+    color: #666;
     text-align: center;
     font-size: 80%;
     position: relative;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-/* --- BOTOES PARA O SEE MORE --- */
-
-.option-btn1 {
-
     font-weight: 300;
     top: 35px;
     z-index: 1000;
-
 }
 
 
