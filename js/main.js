@@ -381,7 +381,7 @@ $(document).scroll(function() {
                             $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
                           }
                         });
-                      })).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF")))));
+                      })).append($("<div>").addClass("info-music_more").append($("<h6>").html(music.title).css("color","#FFF")))));
                     }
                   }
                 });
@@ -495,7 +495,7 @@ $(document).scroll(function() {
                           if (status=='success') {
                             $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                               addFav(response.media[0].tracks[track].title);
-                            })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                            })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music_album").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
                               $("#more-music").hide();
                               $(".player").show();
                               $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
@@ -595,7 +595,7 @@ $(document).scroll(function() {
     for (music of favoritos) {
       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").click(function(){
         showMusic(music);
-        }))).append($("<div>").addClass("info-music").append($("<h6>").html(music).css("color","#FFF"))))
+        }))).append($("<div>").addClass("info-music_favs").append($("<h6>").html(music).css("color","#FFF"))))
     }
   });
 

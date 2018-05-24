@@ -356,6 +356,79 @@ input:checked + .color > .btn-color {
 
 
 
+
+/* BOTOES DE ADICIONAR A PLAYLIST E AOS FAVORITOS */
+/* --- BOTOES PARA O TOP DO ARTISTA */
+.option-btn1_top {
+    position: absolute;
+    display: inline;
+    top: 50px;
+    z-index: 10000;
+}
+
+
+.option-btn1_top .btn-add-fav_top i {
+    position: relative;
+    left: 30px;
+    top: 5px;
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0.22);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 10000;
+}
+
+
+
+.option-btn1_top .btn-add-fav_top i:hover {
+    color: #74C8D2;
+    z-index: 10000;
+}
+
+
+
+
+
+/* --- BOTOES PARA O SEE MORE --- */
+
+
+
+.option-btn1 {
+    position: relative;
+    display: inline;
+    top: -139px;
+    z-index: 10000;
+}
+
+
+.option-btn1 .btn-add-fav i {
+    position: relative;
+    left: 29px;
+    top: 160px;
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0.22);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.option-btn1 .btn-add-fav i:hover {
+    color: #74C8D2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
@@ -1563,7 +1636,7 @@ footer p {
 
 .see-more-music li figure i {
     position: relative;
-    top: 55px;
+    top: 20px;
     left: 37.9%;
     font-size: 400%;
     color: rgba(255, 255, 255, 0.22);
@@ -1578,73 +1651,97 @@ footer p {
 
 
 
+/* info music do --- see more --- */
 
-/* BOTOES DE ADICIONAR A PLAYLIST E AOS FAVORITOS */
-/* --- BOTOES PARA O TOP DO ARTISTA */
-.option-btn1_top {
-    position: absolute;
-    display: inline;
-    top: 50px;
-    z-index: 10000;
-}
-
-
-.option-btn1_top .btn-add-fav_top i {
+.info-music_more {
+    margin: 0 auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.46)));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    top: 2px;
     position: relative;
-    left: 30px;
-    top: 5px;
-    font-size: 200%;
-    color: rgba(255, 255, 255, 0.22);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    z-index: 10000;
+    z-index: 1000;
 }
 
-
-
-.option-btn1_top .btn-add-fav_top i:hover {
-    color: #74C8D2;
-    z-index: 10000;
-}
-
-
-
-
-
-/* --- BOTOES PARA O SEE MORE --- */
-
-.option-btn1 {
-    position: absolute;
-    display: inline;
-    top: 50px;
-    z-index: 10000;
-}
-
-
-.option-btn1 .btn-add-fav i {
+.info-music_more h6 {
+    margin: 0 10px;
+    color: #666;
+    text-align: center;
+    font-size: 80%;
     position: relative;
-    left: 40px;
-    top: 165px;
-    font-size: 200%;
-    color: #000;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    z-index: 10000;
-}
-
-
-
-.option-btn1 .btn-add-fav i:hover {
-    color: #74C8D2;
-    z-index: 10000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    top: 35px;
+    z-index: 1000;
 }
 
 
 
 
+/* info music do search ---- album ---- */
+.info-music_album {
+    margin: 0 auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.46)));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    top: 2px;
+    position: relative;
+    z-index: 1000;
+}
+
+.info-music_album h6 {
+    margin: 0 10px;
+    color: #666;
+    text-align: center;
+    font-size: 80%;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    top: 35px;
+    z-index: 1000;
+}
 
 
 
+
+
+
+/* --- FAVS --- */
+
+
+
+/* info music */
+
+.info-music_favs {
+    margin: 0 auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.46)));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    top: -100px;
+    position: relative;
+    z-index: 1000;
+}
+
+.info-music_favs h6 {
+    margin: 0 10px;
+    color: #666;
+    text-align: center;
+    font-size: 80%;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    top: 35px;
+    z-index: 1000;
+}
 
 
 
