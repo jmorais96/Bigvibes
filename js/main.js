@@ -14,6 +14,9 @@ $(document).ready(function(){
       let artista = $("#header-song").val();
       $("#artist").val(artista);
       $("#submeter").click();
+      $('html,body').animate({
+        scrollTop: $("#search").offset().top},
+        'slow');
   });
 
   // let data = new Date();
@@ -237,6 +240,16 @@ $(document).scroll(function() {
 
 
 /*pesquisa*/
+
+  $(".artists-showcase li .artist-photo").click(function(){
+    let artist = $(this).find(".info-container").find("h4").html();
+    //alert(artist);
+    $("#artist").val(artist);
+    $("#submeter").click();
+    $('html,body').animate({
+        scrollTop: $("#search").offset().top},
+        'slow');
+  });
 
   $("#submeter").click(function(){
     if ($("#artist").val()!="") {
@@ -548,11 +561,6 @@ $(document).scroll(function() {
 
 
 
-  $(".artist-photo").click(function(){
-    let artist = $(this).find("h4").html();
-    $("#artist").val(artist);
-    $("#submeter").click();
-  });
 
 
   //$("#")
