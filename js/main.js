@@ -394,7 +394,7 @@ $(document).scroll(function() {
                             $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
                           }
                         });
-                      })).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF")))));
+                      })).append($("<div>").addClass("info-music_more").append($("<h6>").html(music.title).css("color","#FFF")))));
                     }
                   }
                 });
@@ -424,7 +424,7 @@ $(document).scroll(function() {
               $.get(url,function(response,status){
                 if (status=='success') {
                   //alert(response.images[0].thumbnails.small);
-                  $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<img>").attr("src", response.images[0].thumbnails.small)).append($("<div>").addClass("info-music").append($("<h6>").html(titulo).css("color","#FFF")))).click(function(){
+                  $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<img>").attr("src", response.images[0].thumbnails.small)).append($("<div>").addClass("info-music_album").append($("<h6>").html(titulo).css("color","#FFF")))).click(function(){
                     $(".see-more-music").empty();
                     $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="backArtist()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
                     url="http://musicbrainz.org/ws/2/release/"+album+"?inc=recordings+media&fmt=json";
@@ -436,7 +436,7 @@ $(document).scroll(function() {
                                 addFav(response.media[0].tracks[track].title);
                               })))).append($("<i>").addClass("ion-ios-play-circle").click(function(){
                                 showMusic(response.media[0].tracks[track].title);
-                              })).append($("<div>").addClass("info-music").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))));
+                              })).append($("<div>").addClass("info-music_album").append($("<h6>").html(response.media[0].tracks[track].title).css("color","#FFF")))));
                             }
                           }
                         });
@@ -508,7 +508,7 @@ $(document).scroll(function() {
                           if (status=='success') {
                             $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<div>").addClass("option-btn1").append($("<div>").addClass("btn-add-fav").append($("<i>").addClass("ion-ios-add").click(function(){
                               addFav(music.title);
-                            })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
+                            })))).append($("<i>").addClass("ion-ios-play-circle")).append($("<div>").addClass("info-music_album").append($("<h6>").html(music.title).css("color","#FFF"))))).click(function(){
                               $("#more-music").hide();
                               $(".player").show();
                               $(".player iframe").attr("src", "https://www.youtube.com/embed/"+response.items[0].id.videoId).css("border", "0").css("width", "100%").css("height", "100vh");
@@ -602,11 +602,11 @@ $(document).scroll(function() {
     $(".see-more-music").html('<li><button class="go-back-btn" type="button" name="button" id="your-playlist" onclick="back()"><i class="ion-ios-arrow-back" ></i>GO BACK</button></li>');
     $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-musical-notes").click(function(){
       playPlaylist(favoritos);
-    }))).append($("<div>").addClass("info-music").append($("<h6>").html("favoritos").css("color","#FFF"))))
+    }))).append($("<div>").addClass("info-music_favs").append($("<h6>").html("favoritos").css("color","#FFF"))))
     for (music of favoritos) {
       $(".see-more-music").append($("<li>").append($("<figure>").addClass("music-img").append($("<i>").addClass("ion-ios-play-circle").css("top", "50px").click(function(){
         showMusic(music);
-        }))).append($("<div>").addClass("info-music").append($("<h6>").html(music).css("color","#FFF"))))
+        }))).append($("<div>").addClass("info-music_favs").append($("<h6>").html(music).css("color","#FFF"))))
     }
   });
 
@@ -689,14 +689,19 @@ function addFav(musica){
 
 function backArtist(){
   $("#more-music").hide();
+  $(".div-biography").hide();
   $(".div-pesquisa").show();
 }
 
 /* voltar ao form*/
 function back(){
   $("#more-music").hide();
-  $(".player").hide
+  $(".player").hide()
   $('.form').show();
+}
+function backSeeMore(){
+  $(".player").hide()
+  $("#more-music").show();
 }
 
 
